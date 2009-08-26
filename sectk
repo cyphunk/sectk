@@ -1,0 +1,41 @@
+#!/bin/bash
+# Add files to sectk
+# 
+# who wants to cp -a anyway?  I put this script in my path 
+# to help update and manage the repository.
+export GITDIR="/Users/cyphunk/sectk";
+
+case "$1" in
+  add)
+	# default add
+	$0 often $2
+	;;
+  often)
+	cp -R $2 $GITDIR/often/.
+	;;
+  unoften)
+	cp -R $2 $GITDIR/unoften/.
+	;;
+  inreview)
+	cp -R $2 $GITDIR/inreview/.
+	;;
+  update)
+	cd $GITDIR && \
+	git add * && \
+	git commit -a -m "$2" && \
+	git push origin master
+	;;
+  *)
+	echo "Usage: $0 {add|often|unoften|inreview|update} {directory|comment}"
+	echo ""
+	echo "	add		add file to sektk/often and update git"
+	echo "	often		add file to sektk/often and update git"
+	echo "	unoften		add file to sektk/unoften and update git"
+	echo "	inreview	add file to sektk/often and update git"
+	echo "	update		update git repository with comment"
+	echo ""
+	exit 1
+	;;
+esac
+
+exit 0
