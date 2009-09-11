@@ -1,0 +1,138 @@
+                                 SniffUSB 2.0
+                           A USB Sniffer for Windows
+                                 Release Notes
+
+                http://pcausa.com/Utilities/UsbSnoop/default.htm
+
+                    Printing Communications Associates, Inc.
+                            4201 Brunswick Court
+                            Smyrna, GA 30080 USA
+
+                            TEL: (770) 432-4580
+                            FAX: (770) 436-7246
+                        E-Mail: tdivine@pcausa.com
+
+======================================================================
+Component Name    : SniffUSB 2.0 - A USB Sniffer for Windows
+======================================================================
+Version     : 2.0.0006
+Release Date: 02/23/07
+
+1.) Added Common.h that includes defines of NTDEVICENAME, LINKMANE
+and other strings shared by driver and application for user-mode I/O
+on the driver.
+
+2.) Removed unnecessary call to RtlAnsiUnicodeString in logprint.c,
+method MyThreadFunction.
+
+3.) Made small improvement to logging contols:
+
+   Pause Log Button : Temporarily pauses logging.
+   Resume Log Button: Starts or resumes logging.
+   Close Log Button : Closes the driver's handle on the log file.
+                      Can only be done of logging is paused.
+   Delete Log Button: Deletes the log file.
+                      Can only be done if the driver log file handle
+                      is closed.
+
+4.) Added code in ui to detect when driver is installed and started. If
+driver is not started, then the buttons are enabled a little differently.
+
+======================================================================
+Version     : 2.0.0005
+Release Date: 01/14/07
+
+1.) Now do display refresh after Install, Uninstall, Replug and Log
+Delete buttons are pressed. These need to be explicitly called because
+Build 0004 removed the 1-second automatic update.
+
+2.) Added "Uninstall All" button. This button does Uninstall _AND_ Replug
+of all installed UsbSnoop filters.
+
+======================================================================
+Version     : 2.0.0004
+Release Date: 01/13/07
+
+1.) In FdoHookDispatchInternalIoctl now completly zero newly allocated
+RP_STACK_CONTEXT structure.
+
+2.) Added sanity checks to prevent write fault when calling RtlCopyBytes
+to copy URB in FdoHookDispatchInternalIoctl.
+
+3.) Made some modifications to the user-mode application. Basically the
+refresh mechanism made the tool almost impossible to use if there were
+a large number of USB devices.
+
+3.1) Added display refresh control group and interface to enable automatic
+display refresh and control refresh interval.
+
+3.2) Made log file group and rearranged controls.
+
+3.3) Made filter control group and rearragned install/uninstall/replug
+buttons.
+
+3.4) Added a checkbox to control whether devices that are not present are
+listed.
+
+4.) Fixed bug in "Present" device indication. Original implementation
+made an incorrect comparison using hardware ID. Revised implementation
+makes comparison using instance ID.
+
+
+======================================================================
+Version     : 2.0.0003
+Release Date: 01/03/07
+
+Trying to iron out occasional crashes - particularly at Add/Remove
+time. Testing with DriverVerifier enabled on usbsnoop.sys on 4-way
+SMP machine.
+
+1.) In FilterDispatchPnp and FdoHookDispatchPnp now log additional
+information for MinorFunction IRP_MN_QUERY_INTERFACE.
+
+2.) Now use InterlockedExchangePointer to update dispatch table pointer.
+
+3.) Added reference counting on DEVICE_EXTENSION memory. With this in
+place it is now concievable that final dereference could occur at
+IRQL == DISPATCH_LEVEL. To accomodate this slim possibility final
+calls to IoDetachDevice and IoDeleteDevice are made using a WorkItem
+to insure they are made at IRQL == PASSIVE_LEVEL.
+
+
+======================================================================
+Version     : 2.0.0002
+Release Date: 01/01/07
+
+1.) Changed GUID_SD_FILTER_CONTROL_OBJECT so it will not conflict with
+the WDK toaster filter sample GUID.
+
+   WAS       : {41966169-3FD7-4392-AFE4-E6A9D0A92C72}
+   CHANGED TO: {9FFF154F-2FE5-4341-9799-BDACF40A90E6}
+
+2.) Integrated SniffUSB MFC application's version resources with defines
+in BuildNum.h. Now version number for application and driver can be
+updated by simply editing BuildNum.h and rebuilding drivers and then
+the application.
+
+3.) Restored Benoit's original logging for IRP_MJ_PNP in FilterDispatchAny.
+Now logs these calls as they did in the original:
+
+	IRP_MN_START_DEVICE IRP
+	IRP_MN_QUERY_INTERFACE IRP
+	IRP_MN_QUERY_CAPABILITIES IRP
+	IRP_MN_QUERY_PNP_DEVICE_STATE IRP
+	IRP_MN_QUERY_DEVICE_RELATIONS IRP
+	IRP_MN_QUERY_REMOVE_DEVICE IRP
+	IRP_MN_REMOVE_DEVICE IRP
+
+4.) Restored Benoit's original hook for FdoHookDispatchPnp.
+
+
+======================================================================
+Version     : 2.0.0001
+Release Date: 12/27/06
+
+Initial release. Adaptation of Benoit PAPILLAULT's SniffUSB V1.8
+to allow it to be built using newer development tools.
+
+

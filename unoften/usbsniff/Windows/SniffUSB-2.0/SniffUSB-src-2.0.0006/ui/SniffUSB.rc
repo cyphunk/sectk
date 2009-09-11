@@ -1,0 +1,283 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SniffUSB.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SniffUSB.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About SniffUSB"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SniffUSB Version 2.0.0006",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2000 - 2007 UsbSnoop Project",IDC_STATIC,39,60,153,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "roland@wingmanteam.com\rbenoit.papillault@free.fr\rtdivine@pcausa.com",IDC_STATIC,39,26,111,28
+END
+
+IDD_SNIFFUSB_DIALOG DIALOGEX 0, 0, 506, 305
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Sniffer for USB"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_USBDEVS,"SysListView32",LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,7,7,492,149
+    PUSHBUTTON      "&Replug",IDC_REPLUG,438,244,50,14
+    PUSHBUTTON      "Refresh",IDC_REFRESH,204,180,50,14
+    PUSHBUTTON      "&Install",IDC_INSTALL,438,178,50,14
+    PUSHBUTTON      "&Uninstall",IDC_UNINSTALL,438,202,50,14
+    PUSHBUTTON      "&Close",IDCANCEL,438,276,50,14
+    PUSHBUTTON      "Unpack SYS",IDC_FILTERINSTALL,365,276,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Test",IDC_TEST,312,276,50,14,NOT WS_VISIBLE
+    LTEXT           "Filename :",IDC_STATIC,15,176,50,8
+    LTEXT           "Log size (in bytes) :",IDC_STATIC2,18,209,61,8
+    EDITTEXT        IDC_LOG_SIZE,82,207,50,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_LOG_FILENAME,15,186,117,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Delete Log",IDC_DELETE,84,254,50,14,WS_DISABLED
+    PUSHBUTTON      "&View Log",IDC_VIEW,48,274,50,14
+    GROUPBOX        "Log File:",IDC_STATIC_LOG_FILE_BOX,7,164,137,130
+    GROUPBOX        "Filter Control:",IDC_STATIC_FILTER_CONTROL_BOX,429,164,69,100
+    GROUPBOX        "Display Refresh Control:",IDC_STATIC_DISPLAY_CONTROL_BOX,152,164,150,100
+    CONTROL         "Enable",IDC_CHECK_AUTO_REFRESH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,172,220,38,10
+    GROUPBOX        "Auto-Refresh:",IDC_STATIC_AUTO_REFRESH_BOX,158,204,138,54
+    COMBOBOX        IDC_COMBO_REFRESH_INTERVAL,225,236,59,52,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Refresh Interval:",IDC_STATIC_REFRESH_INTERVAL,170,238,53,8
+    GROUPBOX        "Device List:",IDC_STATIC_DEVICE_LIST_BOX,310,164,110,100
+    CONTROL         "List Devices Not Present",IDC_CHECK_LIST_NOT_PRESENT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,320,179,95,10
+    PUSHBUTTON      "Uninstall All",IDC_BUTTON_UNINSTALL_ALL,438,220,50,14
+    PUSHBUTTON      "Resume Log",IDC_BUTTON_START,18,230,50,14,WS_DISABLED
+    PUSHBUTTON      "Pause Log",IDC_BUTTON_STOP,84,230,50,14
+    PUSHBUTTON      "Close Log",IDC_BUTTON_CLOSE_FILE,18,254,50,14,WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,6
+ PRODUCTVERSION 2,0,0,6
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080004b0"
+        BEGIN
+            VALUE "FileDescription", "SniffUsb MFC Application"
+            VALUE "FileVersion", "V2.0.0.6"
+            VALUE "InternalName", "SniffUsb "
+            VALUE "LegalCopyright", "Copyright © 2000-2007 SniffUsb Project"
+            VALUE "OriginalFilename", "SniffUSB.EXE"
+            VALUE "ProductName", "SniffUsb "
+            VALUE "ProductVersion", "V2.0.0.6"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x800, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_SNIFFUSB_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 499
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 298
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SNOOPUSB MENU 
+BEGIN
+    POPUP "SNOOPUSB"
+    BEGIN
+        MENUITEM "&Install",                    ID_SNOOPUSB_INSTALL
+        MENUITEM "&Uninstall",                  ID_SNOOPUSB_UNINSTALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Replug",                     ID_SNOOPUSB_REPLUG
+        MENUITEM SEPARATOR
+        MENUITEM "Create Service",              ID_SNOOPUSB_CREATESERVICE
+        MENUITEM "Delete Service",              ID_SNOOPUSB_DELETESERVICE
+        MENUITEM "Start Service",               ID_SNOOPUSB_STARTSERVICE
+        MENUITEM "Stop Service",                ID_SNOOPUSB_STOPSERVICE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SNIFFUSB_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_REFRESH_INTERVAL, 0x403, 9, 0
+0x2031, 0x6573, 0x6f63, 0x646e, "\000" 
+    IDC_COMBO_REFRESH_INTERVAL, 0x403, 10, 0
+0x3531, 0x7320, 0x6365, 0x6e6f, 0x0064, 
+    IDC_COMBO_REFRESH_INTERVAL, 0x403, 10, 0
+0x3033, 0x7320, 0x6365, 0x6e6f, 0x0064, 
+    IDC_COMBO_REFRESH_INTERVAL, 0x403, 9, 0
+0x2031, 0x696d, 0x756e, 0x6574, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About SniffUSB..."
+    IDS_FILTERNAME_98       "usbsnoop.sys"
+    IDS_LOWERFILTERS        "LowerFilters"
+    IDS_COL_VIDPID          "VID/PID"
+    IDS_COL_FILTERINSTALLED "Filter installed?"
+    IDS_COL_DESCRIPTION     "Description"
+    IDS_INSTALLED           "Installed"
+    IDS_NOTINSTALLED        "-"
+    IDS_SELECT_ITEM_FIRST   "Please select an item first!"
+    IDS_FILTERNAME_NT       "usbsnoop"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Sniff USB"
+    IDS_COL_PRESENT         "Present"
+    IDS_COL_DRIVER          "Driver"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SniffUSB.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

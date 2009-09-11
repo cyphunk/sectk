@@ -1,0 +1,42 @@
+The PCAUSA UsbSniff 2.0 Hope Page is:
+
+    http://pcausa.com/Utilities/UsbSnoop/default.htm
+    tdivine@pcausa.com
+    
+Benoit's SniffUSB original V1.8 source and executables can be found at the URL:
+
+    http://benoit.papillault.free.fr/usbsnoop/index.php.en
+
+* Contents:
+
+You should file the following files in this source package:
+
+BUFFER.C
+BUFFER.H
+FILTER.CPP
+FILTER.H
+FILTER.RC
+LOGGING.CPP
+LOGGING.H
+LOGPRINT.C
+LOGPRINT.H
+makefile
+PRECOMP.H
+readme
+SOURCES
+STRINGS.C
+
+* Compile:
+
+You should compile those source files using the Windows Vista Windows
+Driver Kit (WDK 6000).
+
+You do _NOT_ use Visual Studio to build the UsbSnoop 2.0 drivers.
+
+Use the Windows XP x86 Build Environments for building x86 versions of the
+driver.
+
+Use the Windows Server 2003 x64 Build Environments for building x64 (AMD64)
+versions of the driver.
+
+

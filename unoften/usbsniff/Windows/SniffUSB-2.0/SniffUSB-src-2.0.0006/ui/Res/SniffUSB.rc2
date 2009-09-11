@@ -1,0 +1,28 @@
+//
+// SNIFFUSB.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+//IDR_SNOOPUSB          DATA        "Res\UsbSnoop.sys"
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+
+#ifdef _WIN64
+    #ifdef _DEBUG
+    SYS_SNOOPY_NT	RCDATA	"..\\filter\\objchk_wnet_amd64\\amd64\\usbsnoop.sys"
+    #else
+    SYS_SNOOPY_NT	RCDATA	"..\\filter\\objfre_wnet_amd64\\amd64\\usbsnoop.sys"
+    #endif
+#else
+    #ifdef _DEBUG
+    SYS_SNOOPY_NT	RCDATA	"..\\filter\\objchk_wxp_x86\\i386\\usbsnoop.sys"
+    #else
+    SYS_SNOOPY_NT	RCDATA	"..\\filter\\objfre_wxp_x86\\i386\\usbsnoop.sys"
+    #endif
+#endif

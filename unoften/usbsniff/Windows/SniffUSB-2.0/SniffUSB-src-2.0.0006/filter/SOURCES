@@ -1,0 +1,24 @@
+!if "$(_BUILDARCH)"=="AMD64"
+TARGETNAME=UsbSnoop
+!else
+TARGETNAME=UsbSnoop
+!endif
+
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+PRECOMPILED_INCLUDE=precomp.h
+
+TARGETLIBS=  $(DDK_LIB_PATH)\wdmsec.lib
+
+C_DEFINES=$(C_DEFINES)  -DIOCTL_INTERFACE
+
+INCLUDES=..\Shared
+
+SOURCES= Filter.cpp \
+         Buffer.c \
+         LogPrint.c \
+         Logging.cpp \
+         Strings.c \
+	 Filter.rc
+

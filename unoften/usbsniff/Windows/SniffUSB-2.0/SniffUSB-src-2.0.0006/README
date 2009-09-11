@@ -1,0 +1,59 @@
+The PCAUSA UsbSniff 2.0 Hope Page is:
+
+    http://pcausa.com/Utilities/UsbSnoop/default.htm
+    tdivine@pcausa.com
+    
+Benoit's SniffUSB original V1.8 source and executables can be found at the URL:
+
+    http://benoit.papillault.free.fr/usbsnoop/index.php.en
+
+
+
+usbsnoop version 2.0
+January 3, 2007 tdivine@pcausa.com
+
+1. WHAT IS IT?
+--------------
+
+usbsnoop is a package design to log USB packet going from your Windows
+device driver to your harware device and vice-versa. It works under
+Windows NT 2000 only.
+
+2. BUILDING DRIVERS
+-------------------
+You must install the Microsoft Vista Windows Driver Kit (WDK 6000).
+
+You do _NOT_ use Visual Studio to build the UsbSnoop 2.0 drivers.
+
+Use the Windows XP x86 Build Environments for building x86 versions of the
+driver.
+
+Use the Windows Server 2003 x64 Build Environments for building x64 (AMD64)
+versions of the driver.
+
+Self-sign the x64 driver if you intend to run it on Windows Vista x64 Edition.
+
+
+3. COMPILING THE APPLICATION
+----------------------------
+You must build the drivers before attempting to build the application. The
+drivers are loaded into the application resource file and the compilation
+will fail if they are not already built.
+
+You should compile those source files either in "Win32 Debug" mode or in
+"Win32 Release" mode. You may also select x64 configurations.
+
+You must install Microsoft Visual Studio 2005 and all current updates. After
+that, you must also install the Windows Vista Platform SDK before compiling
+the UsbSniff application.
+
+It is not necessary to reference header files from the WDK to build UsbSniff
+under Visual Studio 2005 with the companion Windows Vista Platform SDK.
+
+
+4. INSTALLATION
+---------------
+You will need to install the .NET framework on systems that will run SniffUSB 2.0.
+
+If the necessary MFC and CRT 8 support DLLs are installed, then just run SniffUSB.exe.
+It will automatically install the needed drivers (.sys files).

@@ -1,0 +1,120 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SniffUSB - Win32 Debug win2k--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"debug2k/SniffUSB.res" /d "_DEBUG" "C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\SniffUSB.rc"" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP106.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FR"debug2k/" /Fp"debug2k/SniffUSB.pch" /Yu"stdafx.h" /Fo"debug2k/" /Fd"debug2k/" /FD /GZ /c 
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\device.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\devicemgr.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\servicemgr.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\SniffUSB.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\SniffUSBDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP106.tmp" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP107.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FR"debug2k/" /Fp"debug2k/SniffUSB.pch" /Yc /Fo"debug2k/" /Fd"debug2k/" /FD /GZ /c 
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP107.tmp" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP108.tmp" with contents
+[
+setupapi.lib /nologo /subsystem:windows /incremental:yes /pdb:"debug2k/SniffUSB.pdb" /debug /machine:I386 /out:"debug2k/SniffUSB.exe" /pdbtype:sept 
+".\debug2k\device.obj"
+".\debug2k\devicemgr.obj"
+".\debug2k\multisz.obj"
+".\debug2k\servicemgr.obj"
+".\debug2k\SniffUSB.obj"
+".\debug2k\SniffUSBDlg.obj"
+".\debug2k\StdAfx.obj"
+".\debug2k\SniffUSB.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP108.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+device.cpp
+devicemgr.cpp
+multisz.cpp
+C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp(62) : warning C4018: '<' : signed/unsigned mismatch
+C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp(69) : warning C4018: '!=' : signed/unsigned mismatch
+C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp(247) : warning C4018: '<' : signed/unsigned mismatch
+servicemgr.cpp
+SniffUSB.cpp
+SniffUSBDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+SniffUSB.exe - 0 error(s), 3 warning(s)
+<h3>
+--------------------Configuration: SniffUSB - Win32 Release win2k--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"release2k/SniffUSB.res" /d "NDEBUG" "C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\SniffUSB.rc"" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP10A.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FR"release2k/" /Fp"release2k/SniffUSB.pch" /Yu"stdafx.h" /Fo"release2k/" /Fd"release2k/" /FD /c 
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\device.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\devicemgr.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\servicemgr.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\SniffUSB.cpp"
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\SniffUSBDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP10A.tmp" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP10B.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FR"release2k/" /Fp"release2k/SniffUSB.pch" /Yc /Fo"release2k/" /Fd"release2k/" /FD /c 
+"C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP10B.tmp" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP10C.tmp" with contents
+[
+setupapi.lib /nologo /subsystem:windows /incremental:no /pdb:"release2k/SniffUSB.pdb" /machine:I386 /out:"release2k/SniffUSB.exe" 
+".\release2k\device.obj"
+".\release2k\devicemgr.obj"
+".\release2k\multisz.obj"
+".\release2k\servicemgr.obj"
+".\release2k\SniffUSB.obj"
+".\release2k\SniffUSBDlg.obj"
+".\release2k\StdAfx.obj"
+".\release2k\SniffUSB.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\THOMAS~1.DIV\LOCALS~1\Temp\RSP10C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+device.cpp
+devicemgr.cpp
+multisz.cpp
+C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp(62) : warning C4018: '<' : signed/unsigned mismatch
+C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp(69) : warning C4018: '!=' : signed/unsigned mismatch
+C:\PCADev\Research\USB\UsbSniff-PCAUSA\sniff-src-1.8\ui\multisz.cpp(247) : warning C4018: '<' : signed/unsigned mismatch
+servicemgr.cpp
+SniffUSB.cpp
+SniffUSBDlg.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4089: all references to "comdlg32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+SniffUSB.exe - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

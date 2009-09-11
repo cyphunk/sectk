@@ -25,14 +25,20 @@ case "$1" in
 	git commit -a -m "$2" && \
 	git push origin master
 	;;
+  cleanosx)
+	find $2 -name .DS_Store -exec rm {} \;
+	;;
   *)
 	echo "Usage: $0 {add|often|unoften|inreview|update} {directory|comment}"
 	echo ""
-	echo "	add		add file to sektk/often and update git"
-	echo "	often		add file to sektk/often and update git"
+	echo "	directory should be without trailing / "
+	echo ""
+	echo "	often/add	add file to sektk/often and update git"
 	echo "	unoften		add file to sektk/unoften and update git"
 	echo "	inreview	add file to sektk/often and update git"
 	echo "	update		update git repository with comment"
+	echo ""
+	echo "	cleanosx	remove all .DS_Store files"
 	echo ""
 	exit 1
 	;;

@@ -1,0 +1,83 @@
+* Version 2.0 Introduction - December, 2006
+===========================================
+The purpose of this update is simply to allow SniffUsb and UsbSnoopy
+to be built using currently available development tools. In particular,
+Microsoft Visual C++ and the Windows 2000 DDK are deprecated tools that
+are no longer available.
+
+This version of the SniffUsb MFC application is an update to the
+UsbSniff 1.8 release by by Benoit PAPILLAULT <benoit.papillault@free.fr>.
+Benoit deserves a great deal of credit because remarkably little effort
+was required to adapt the V1.8 MFC application to be built successfully
+under Microsoft Visual Studio 2005.
+
+Some deprecated functions were replaced with newer preferred functions.
+Support for Windows versions prior to Windows XP was removed.
+
+Both the application and the driver can be built for Windows x64 Editions.
+Extremely limited testing was done on Windows XP x64 Edition, but the
+brief tests that were done appeared to be successful.
+
+Extremely limited testing was done on Windows Vista RTM (Build 6000),
+but the brief tests that were done were also successful. It is necessary to
+use the Vista "Run as administrator..." tool to run UsbSniff on Vista.
+
+   Thomas F. Divine
+   <tdivine@pcausa.com>
+   http://www.pcausa.com
+
+
+* Project Home Page
+
+The PCAUSA UsbSniff 2.0 Hope Page is:
+
+    http://pcausa.com/Utilities/UsbSnoop/default.htm
+    
+Benoit's SniffUSB original V1.8 source and executables can be found at the URL:
+
+    http://benoit.papillault.free.fr/usbsnoop/index.php.en
+
+
+
+* Contents:
+
+You should file the following files in this source package:
+
+device.cpp
+device.h
+devicemgr.cpp
+devicemgr.h
+multisz.cpp
+multisz.h
+resource.h
+servicemgr.cpp
+servicemgr.h
+SniffUSB.cpp
+SniffUSB.h
+SniffUSB.rc
+SniffUSB.vcproj
+SniffUSBDlg.cpp
+SniffUSBDlg.h
+StdAfx.cpp
+StdAfx.h
+Res
+README           this file
+
+* Compile:
+
+Before attempting to build the UsbSniff application it is necessary to build
+the UsbSnoop.sys driver using the Windows XP Build Environment of the Microsoft
+Vista Windows Driver Kit (WDK 6000). See the README file in the filter folder.
+
+You should compile those source files either in "Win32 Debug" mode
+or in "Win32 Release" mode.
+
+Please install the Windows Vista Platform SDK before compiling UsbSniff.
+
+It is not necessary to reference header files from the WDK to build UsbSniff
+under Visual Studio 2005 with the companion Windows Vista Platform SDK.
+
+If your compile is ok, the file "sniffusb.exe" will be available.
+
+27/12/3006 Thomas F. Divine <tdivine@pcausa.com>
+
