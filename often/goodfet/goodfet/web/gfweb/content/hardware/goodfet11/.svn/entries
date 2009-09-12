@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/hardware/goodfet11
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-08-31T23:46:24.413732Z
+100
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+goodfet11.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+37fb93a9e41d696353afd1708b96749e
+2009-05-19T13:30:37.503953Z
+11
+travisutk
+
+goodfet11.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+64cd214be9caad6b1e80dad821fbaa37
+2009-08-31T23:46:24.413732Z
+100
+travisutk
+

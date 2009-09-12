@@ -1,0 +1,54 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/branches/goodfet11
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-05-18T14:52:04.109980Z
+10
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+goodfet11.brd
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+8b05d3328bce08577ab99acccc24e5a1
+2009-05-18T14:52:04.109980Z
+10
+travisutk
+has-props
+
+goodfet11.sch
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+274e5657426e2d1194179d59cd0bbe4a
+2009-05-18T14:52:04.109980Z
+10
+travisutk
+has-props
+

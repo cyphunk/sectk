@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/hardware/goodfet20
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-09-01T00:16:38.253759Z
+102
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+goodfet20.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+ddca47fb889a64a346a2da5825869c68
+2009-07-16T15:12:34.954633Z
+61
+travisutk
+
+goodfet20.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+bf2bdd1427affe7a771c5c6301c5c0db
+2009-09-01T00:16:38.253759Z
+102
+travisutk
+

@@ -1,0 +1,31 @@
+Partlist exported from /home/travis/svn/goodfet/trunk/hardware/goodfet11.sch at 5/18/09 10:20 AM
+
+Part  Value             Device            Package      Description               
+C1    10µF              C-USC0603         C0603        CAPACITOR, American symbol
+C2    0.1µF             C-EUC0603         C0603        CAPACITOR, European symbol
+C3    10µF              C-USC0603         C0603        CAPACITOR, American symbol
+C4    0.1µF             C-EUC0603         C0603        CAPACITOR, European symbol
+IC1   F161X---PM64      F161X---PM64      PM/PAG64     *** MSP430F161x *** PM64  
+IC2   FT232RL-BASICSSOP FT232RL-BASICSSOP SSOP28DB     USB UART                  
+LED1                    LEDCHIP-LED0603   CHIP-LED0603 LED                       
+Q1    32KHz             CRYSTALTC26H      TC26H        Crystals                  
+R1    47K               R-US_R0603        R0603        RESISTOR, American symbol 
+R2    47K               R-US_R0603        R0603        RESISTOR, American symbol 
+R3    47K               R-US_R0603        R0603        RESISTOR, American symbol 
+R4    47K               R-US_R0603        R0603        RESISTOR, American symbol 
+R5    330               R-US_R0603        R0603        RESISTOR, American symbol 
+R6                      R-US_R0603        R0603        RESISTOR, American symbol 
+R7                      R-US_R0603        R0603        RESISTOR, American symbol 
+R8                      R-US_R0603        R0603        RESISTOR, American symbol 
+R9                      R-US_R0603        R0603        RESISTOR, American symbol 
+R10   300               R-US_R0603        R0603        RESISTOR, American symbol 
+R11                     R-US_R0603        R0603        RESISTOR, American symbol 
+R12   47K               R-US_R0603        R0603        RESISTOR, American symbol 
+R13                     R-US_R0603        R0603        RESISTOR, American symbol 
+R14   74K               R-US_R0603        R0603        RESISTOR, American symbol 
+RXLED                   LEDCHIP-LED0603   CHIP-LED0603 LED                       
+SER                     MTA02-100         10X02MTA     AMP connector             
+SV1                     MA07-2            MA07-2       PIN HEADER                
+TP                      MA05-1            MA05-1       PIN HEADER                
+TXLED                   LEDCHIP-LED0603   CHIP-LED0603 LED                       
+X1    USBPCB            USBPCB            USB-A-PCB    USB Connectors            

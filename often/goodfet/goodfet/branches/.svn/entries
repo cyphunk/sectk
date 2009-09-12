@@ -1,0 +1,61 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/branches
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-08-30T16:14:10.146493Z
+96
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+build.zsh
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+5c3fd6e254b3d7dc6c9ab396d35bca45
+2009-05-13T14:49:06.173709Z
+4
+travisutk
+
+goodfet10
+dir
+
+goodfet11
+dir
+
+goodfet20
+dir
+
+Makefile
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+bd4aef28a84309fac0f980333b8bb37a
+2009-05-18T14:52:04.109980Z
+10
+travisutk
+

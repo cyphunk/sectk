@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/goodfet/!svn/ver/120/trunk/firmware/lib
+END
+command.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/goodfet/!svn/ver/120/trunk/firmware/lib/command.c
+END
+msp430x2618.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/goodfet/!svn/ver/91/trunk/firmware/lib/msp430x2618.c
+END
+msp430x1612.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/goodfet/!svn/ver/86/trunk/firmware/lib/msp430x1612.c
+END
+msp430x2274.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/goodfet/!svn/ver/103/trunk/firmware/lib/msp430x2274.c
+END

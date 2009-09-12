@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/apps/chipcon
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-06-18T20:03:00.100367Z
+40
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+chipcon.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+c67bb3cdbce9d779c631f433ca797f3e
+2009-06-09T22:08:35.053369Z
+33
+travisutk
+
+chipcon.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+9d47fcbbf26c1268d446078a857ef65a
+2009-06-18T20:03:00.100367Z
+40
+travisutk
+

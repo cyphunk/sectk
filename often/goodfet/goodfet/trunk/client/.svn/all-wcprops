@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svnroot/goodfet/!svn/ver/127/trunk/client
+END
+goodfet.spiflash
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/goodfet/!svn/ver/124/trunk/client/goodfet.spiflash
+END
+goodfet.i2crom
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/goodfet/!svn/ver/105/trunk/client/goodfet.i2crom
+END
+GoodFETMSP430.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/goodfet/!svn/ver/127/trunk/client/GoodFETMSP430.py
+END
+intelhex.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/goodfet/!svn/ver/41/trunk/client/intelhex.py
+END
+GoodFETSPI.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/goodfet/!svn/ver/124/trunk/client/GoodFETSPI.py
+END
+goodfet.cc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/goodfet/!svn/ver/116/trunk/client/goodfet.cc
+END
+goodfet.msp430
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/goodfet/!svn/ver/123/trunk/client/goodfet.msp430
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/goodfet/!svn/ver/105/trunk/client/Makefile
+END
+goodfet.monitor
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/goodfet/!svn/ver/127/trunk/client/goodfet.monitor
+END
+GoodFET.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/goodfet/!svn/ver/127/trunk/client/GoodFET.py
+END

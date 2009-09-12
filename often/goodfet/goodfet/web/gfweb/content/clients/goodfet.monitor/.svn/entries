@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/clients/goodfet.monitor
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-08-20T14:54:33.634683Z
+81
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+goodfet.monitor.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+641269afeef463d0222f4785d75d7b90
+2009-08-20T14:54:33.634683Z
+81
+travisutk
+
+goodfet.monitor.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+e0c8a08b3bc32cae5033f69eb5384897
+2009-08-20T14:54:33.634683Z
+81
+travisutk
+

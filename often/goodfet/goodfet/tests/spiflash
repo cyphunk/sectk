@@ -1,0 +1,24 @@
+Ident as Winbond W25X80L
+Manufacturer: ef Winbond
+Type: 30
+Capacity: 14 (1048576 bytes)
+Connection Test: (- is bad)
+++++++++++++++++++++++++++++++++++++++++
+0 misreads
+All reads succeeded.  Wiring is probably good.
+Peeking from 000000 to 000005.
+000000: ff
+000001: ff
+000002: ff
+000003: ff
+000004: ff
+000005: ff
+Flashing code from 000000 to 000005 with /home/travis/mx.rom.
+Peeking from 000000 to 000005.
+000000: 41
+000001: 53
+000002: 55
+000003: 53
+000004: 54
+000005: 45
+0x12fe RAM bytes free.

@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/releases
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-05-13T14:49:06.173709Z
+4
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+releases.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+a2f5ef3b0dfee29a171a8b902a52d569
+2009-05-13T14:49:06.173709Z
+4
+travisutk
+
+releases.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+f4d73d5c750d16080b53831af6ec827f
+2009-05-13T14:49:06.173709Z
+4
+travisutk
+

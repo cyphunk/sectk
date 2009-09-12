@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svnroot/goodfet/!svn/ver/16/contrib/fetextract
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/goodfet/!svn/ver/5/contrib/fetextract/LICENSE
+END
+fetextract.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/goodfet/!svn/ver/4/contrib/fetextract/fetextract.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/goodfet/!svn/ver/16/contrib/fetextract/Makefile
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svnroot/goodfet/!svn/ver/99/trunk/hardware
+END
+goodfet30.brd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/goodfet/!svn/ver/99/trunk/hardware/goodfet30.brd
+END
+goodfet30.sch
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/goodfet/!svn/ver/98/trunk/hardware/goodfet30.sch
+END
+BOM.txt
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svnroot/goodfet/!svn/ver/7/trunk/hardware/BOM.txt
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/goodfet/!svn/ver/3/trunk/hardware/README.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/goodfet/!svn/ver/59/trunk/hardware/Makefile
+END

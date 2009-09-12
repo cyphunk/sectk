@@ -1,0 +1,109 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-09-06T17:15:31.466074Z
+125
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+layouts
+dir
+
+output
+dir
+
+assets
+dir
+
+Rakefile
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+9af0cd8ae62609f7cd8b3fbd48b9e4fb
+2009-04-30T22:22:30.242671Z
+2
+travisutk
+
+page_defaults.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+4e943919cd627e9f3b68d3c5b2e67a05
+2009-04-30T22:22:30.242671Z
+2
+travisutk
+
+tasks
+dir
+
+lib
+dir
+
+config.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+ba4f91fbf653bf2f397acc53138425da
+2009-04-30T22:22:30.242671Z
+2
+travisutk
+
+asset_defaults.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+3341851103c5527c29b7859ed579d55b
+2009-04-30T22:22:30.242671Z
+2
+travisutk
+
+content
+dir
+
+Makefile
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+c76414d6607542cf78f47276716858d2
+2009-07-16T15:12:34.954633Z
+61
+travisutk
+
+templates
+dir
+

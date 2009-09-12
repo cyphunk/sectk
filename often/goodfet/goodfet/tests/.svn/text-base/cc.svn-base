@@ -1,0 +1,19 @@
+Target identifies as CC2430/r04.
+Target identifies as CC2430/r04.
+Tracing execution at startup.
+Verifying that debugging a NOP doesn't affect the PC.
+Done.
+Target identifies as CC2430/r04.
+Poking ffe0 to become de.
+Target identifies as CC2430/r04.
+Poking ffe1 to become ad.
+Target identifies as CC2430/r04.
+Poking ffe2 to become be.
+Target identifies as CC2430/r04.
+Poking ffe3 to become ef.
+Target identifies as CC2430/r04.
+Peeking from ffe0 to ffe3.
+ffe0: de
+ffe1: ad
+ffe2: be
+ffe3: ef

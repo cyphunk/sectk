@@ -1,0 +1,94 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/trunk/firmware
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-09-11T08:10:25.158262Z
+127
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+configure
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+7a9584c37e848f8748c94364c5eb12b1
+2009-09-01T18:36:22.630320Z
+103
+travisutk
+has-props
+
+tests
+dir
+
+apps
+dir
+
+include
+dir
+
+lib
+dir
+
+ldscripts
+dir
+
+goodfet.c
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+9ead14ef13e3e014fd7861e0a236db6f
+2009-09-04T06:37:08.955140Z
+119
+travisutk
+has-props
+
+README.txt
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+a4bed9e028c3d1ba652eec9bcc5cfa66
+2009-08-23T12:19:39.418870Z
+84
+travisutk
+
+Makefile
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+d940147bbd7839f38a5629b28531b4ac
+2009-09-09T05:52:51.409231Z
+126
+travisutk
+has-props
+

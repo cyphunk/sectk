@@ -1,0 +1,34 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/trunk/firmware/tests
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-08-26T01:06:04.543656Z
+89
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+blink
+dir
+
+echo
+dir
+

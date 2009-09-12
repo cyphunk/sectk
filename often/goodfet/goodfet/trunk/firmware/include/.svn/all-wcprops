@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/goodfet/!svn/ver/127/trunk/firmware/include
+END
+spi.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/goodfet/!svn/ver/126/trunk/firmware/include/spi.h
+END
+command.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/goodfet/!svn/ver/126/trunk/firmware/include/command.h
+END
+apps.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/goodfet/!svn/ver/112/trunk/firmware/include/apps.h
+END
+chipcon.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/goodfet/!svn/ver/58/trunk/firmware/include/chipcon.h
+END
+platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/goodfet/!svn/ver/127/trunk/firmware/include/platform.h
+END
+jtag.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/goodfet/!svn/ver/120/trunk/firmware/include/jtag.h
+END
+monitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/goodfet/!svn/ver/80/trunk/firmware/include/monitor.h
+END

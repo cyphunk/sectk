@@ -27,6 +27,11 @@ case "$1" in
 	;;
   cleanosx)
 	find $2 -name .DS_Store -exec rm {} \;
+	find $2 -name .\*
+	;;
+  cleanalldot)
+	find $2 -name .\* -exec rm {} \;
+	find $2 -name .\*
 	;;
   *)
 	echo "Usage: $0 {add|often|unoften|inreview|update} {directory|comment}"
@@ -39,6 +44,7 @@ case "$1" in
 	echo "	update		update git repository with comment"
 	echo ""
 	echo "	cleanosx	remove all .DS_Store files"
+	echo "	cleanalldot	careful! removes all dot files"
 	echo ""
 	exit 1
 	;;

@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/apps/i2c
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-06-09T22:08:35.053369Z
+33
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+i2c.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+4fb58d3b8b9c52c03cf86346616eabc7
+2009-06-09T22:08:35.053369Z
+33
+travisutk
+
+i2c.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+b09db24f162daa13daee360ae62bee97
+2009-06-09T22:08:35.053369Z
+33
+travisutk
+

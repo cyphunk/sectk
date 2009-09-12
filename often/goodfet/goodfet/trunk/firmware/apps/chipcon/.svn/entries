@@ -1,0 +1,40 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/trunk/firmware/apps/chipcon
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-08-08T20:00:59.810482Z
+73
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+chipcon.c
+file
+
+
+
+
+2009-09-11T18:49:44.000000Z
+f67b96c6c721c32de8c02110be2b821e
+2009-08-08T20:00:59.810482Z
+73
+travisutk
+

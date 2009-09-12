@@ -1,0 +1,59 @@
+ftdibb -- an easy to use ftdi bit-bang mode library for linux.
+
+The library is designed for the chips from
+http://www.ftdichip.com/
+It uses libusb from http://libusb.sourceforge.net/
+
+It's tested with the chips:
+FT232BM FT232BL FT245BM FT245BL
+
+The examples are written for FT232BM/FT232BL. You have to
+change the device IDs for other chips.
+
+Bitbang mode is a special mode of the ftdi serial IO chips
+which allows you to use all 8 IO-pins either as input or
+output.
+You can query the state of each pin at any time  (function ftdibb_getBitMode)
+An output pin can be set to 1 (=+5V) or 0 (=0V). It will stay in this
+state until you change it again.
+
+See bitbang_example.c and bitbang_runlight_example.c for examples.
+The corresponding circuit diagram is circuitbitbang_example.pdf
+
+You must be root when you run the examples (see below).
+The kernel module for the usb to rs232 converter function (ftdi_sio)
+must not be loaded otherwise libusb will get into access conflicts.
+
+-------
+Installation:
+1) get libusb and install it
+2) edit the make file and Makefile an adjust the path for
+   libusb at the beginning of the file
+3) type: make
+4) try the examples
+5) to use ftdibb just copy ftdibb.c and ftdibb.h into your
+   application. The files are so small that it makes no sense
+   to make a real runtime linked library.
+-------
+ftdibb uses libusb to send usb-urbs (messages) to the chip:
+http://libusb.sourceforge.net/
+
+A limitation of libusb is that it uses the /proc filesystem to send
+and receive urbs. This means under linux that you have to run everything
+as root.
+It is possible to use the suid binaries to work around this.
+It would be possible to extend the existing ftdi_sio kernel module
+with BitBang functionality but this would require a kernel patch.
+
+Pre-compiled examples are available in the bin directory.
+
+-------
+Author: Guido Socher (email: guido at tuxgraphics.org)
+COPYRIGHT: GPL
+-------
+ftdibb-0.1 -- 2003-02-22 first version
+ftdibb-0.4 -- 2005-10-02 first public release
+              (tested with libusb-0.1.10a.tar.gz)
+ftdibb-0.5 -- 2006-10-02 added a reset function to reset the chip or purge Tx/Rx
+-------
+

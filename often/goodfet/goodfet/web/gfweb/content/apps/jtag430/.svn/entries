@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/apps/jtag430
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-09-06T17:15:31.466074Z
+125
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+jtag430.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+c61d767239bda171ac228bdb2ed92bca
+2009-09-06T17:15:31.466074Z
+125
+travisutk
+
+jtag430.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+e8f12e8e9efdd23e505700fb0ec497b4
+2009-06-18T20:03:00.100367Z
+40
+travisutk
+

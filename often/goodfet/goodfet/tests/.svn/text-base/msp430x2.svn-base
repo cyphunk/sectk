@@ -1,0 +1,8 @@
+Model    0100 
+Core 00000000 
+Identity ff3f
+Poking 003000 to become dead.
+Poking 003002 to become beef.
+Peeking from 3000 to 3002.
+3000: dead
+3002: beef

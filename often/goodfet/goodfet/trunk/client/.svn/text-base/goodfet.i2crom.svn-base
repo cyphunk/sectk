@@ -1,0 +1,158 @@
+#!/usr/bin/env python
+
+#GoodFET I2C EEPROM Client
+#by Travis Goodspeed
+
+import sys;
+import binascii;
+import array;
+
+from GoodFET import GoodFET;
+from intelhex import IntelHex;
+
+if(len(sys.argv)==1):
+    print "Usage: %s verb [objects]\n" % sys.argv[0];
+    print "%s info" % sys.argv[0];
+    print "%s dump $foo.hex [0x$start 0x$stop]" % sys.argv[0];
+    print "%s erase" % sys.argv[0];
+    print "%s write $foo.hex [0x$start 0x$stop]" % sys.argv[0];
+    print "%s verify $foo.hex [0x$start 0x$stop]" % sys.argv[0];
+    print "%s peek 0x$start [0x$stop]" % sys.argv[0];
+    print "%s poke 0x$adr 0x$val" % sys.argv[0];
+    sys.exit();
+
+#Initailize FET and set baud rate
+client=GoodFET();
+client.serInit()
+
+
+client.I2Csetup();
+
+#Dummy read.
+#Might read as all ones if chip has a startup delay.
+#client.SPIjedec();
+
+if(sys.argv[1]=="foo"):
+    client.I2Cstart();
+    
+    # Write AA55 at 0x00
+    #print "%i" % client.I2Cwrite([0xA0, 0x00, 0x00, 0xAA, 0x55, 0xAA, 0x55, 0xAA, 0x55]); 
+    client.I2Cstop();
+    
+    client.I2Cstart();
+    print "%i" % client.I2Cwrite([0xA0, 0x00, 0x00]); # Set ADR=0x00
+    client.I2Cstart();#restart
+    print "%i" % client.I2Cwrite([0xA1]); # Set ADR=0x00
+    data=client.I2Cread(128);
+    s="";
+    for d in data:
+        s+="%02x " % ord(d);
+    print s
+    client.I2Cstop();
+
+
+if(sys.argv[1]=="test"):
+    result="";
+    dropped=0;
+    for i in range(40):
+        data=client.SPIjedec();
+        if ord(data[1])==0xFF:
+            result+="-";
+            dropped=dropped+1;
+        else:
+            result+="+";
+    print "Connection Test: (- is bad)\n%s" % result;
+    print "%i misreads" % dropped;
+    if(dropped==40):
+        print "No successful reads.  Is the chip wired correctly?";
+    elif(dropped>0):
+        print "Some success, some failures.  Is a wire loose?";
+    else:
+        print "All reads succeeded.  Wiring is probably good.";
+
+if(sys.argv[1]=="info"):
+    data=client.SPIjedec();
+    print "Ident as %s\nManufacturer: %02x %s\nType: %02x\nCapacity: %02x" % (
+        client.SPIjedecstr(),
+        ord(data[1]),client.SPIjedecmanstr(),
+        ord(data[2]),
+        ord(data[3]));
+
+if(sys.argv[1]=="dump"):
+    f = sys.argv[2];
+    start=0x0000;
+    stop=0x100000; #TODO, adjust this by the JEDEC size parameter.
+    if(len(sys.argv)>3):
+        start=int(sys.argv[3],16);
+    if(len(sys.argv)>4):
+        stop=int(sys.argv[4],16);
+    
+    print "Dumping code from %06x to %06x as %s." % (start,stop,f);
+    file = open(f, mode='wb')
+
+    i=start;
+    while i<=stop:
+        data=client.SPIpeekblock(i);
+        if(i%0x1000==0):
+            print "Dumped %06x."%i;
+        for j in data:
+            file.write(j);
+            i+=1;
+    file.close()
+if(sys.argv[1]=="flash"):
+    f = sys.argv[2];
+    start=0x0000;
+    stop=0x100000; #TODO, adjust this by the JEDEC size parameter.
+    if(len(sys.argv)>3):
+        start=int(sys.argv[3],16);
+    if(len(sys.argv)>4):
+        stop=int(sys.argv[4],16);
+    
+    print "Flashing code from %06x to %06x with %s." % (start,stop,f);
+    file = open(f, mode='rb')
+
+    i=start;
+    chars=list(file.read());
+    chunksize=0x80;
+    
+    while i<=stop:
+        bytes=range(0,chunksize);
+        for j in range(0,chunksize):
+            bytes[j]=ord(chars[i+j]);
+        #client.SPIpokebyte(i,ord(chars[i]));
+        client.SPIpokebytes(i,bytes);
+        
+        i+=chunksize;
+        if(i%0x100==0):
+            print "Flashed %06x."%i;
+    file.close()
+
+
+if(sys.argv[1]=="erase"):
+  client.SPIchiperase();
+
+if(sys.argv[1]=="peek"):
+    start=0x0000;
+    if(len(sys.argv)>2):
+        start=int(sys.argv[2],16);
+    stop=start;
+    if(len(sys.argv)>3):
+        stop=int(sys.argv[3],16);
+    print "Peeking from %06x to %06x." % (start,stop);
+    while start<=stop:
+        print "%06x: %02x" % (start,client.SPIpeek(start));
+        start=start+1;
+
+if(sys.argv[1]=="poke"):
+    start=0x0000;
+    val=0x00;
+    if(len(sys.argv)>2):
+        start=int(sys.argv[2],16);
+    if(len(sys.argv)>3):
+        val=int(sys.argv[3],16);
+    print "Poking %06x to become %02x." % (start,val);
+    
+    while client.SPIpeek(start)!=val:
+        client.SPIpokebyte(start,val);
+        print "Poked to %02x" % client.SPIpeek(start);
+

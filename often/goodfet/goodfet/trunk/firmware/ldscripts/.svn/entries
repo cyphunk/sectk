@@ -1,0 +1,53 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/trunk/firmware/ldscripts
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-08-22T23:34:06.713718Z
+83
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+README.txt
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+f55f1d390eb90ac7d29e465c3d9e8c3c
+2009-08-22T23:34:06.713718Z
+83
+travisutk
+
+msp430x1612.x
+file
+
+
+
+
+2009-09-11T18:49:45.000000Z
+14efc799a094383dfdc4be780b04bee2
+2009-08-22T23:34:06.713718Z
+83
+travisutk
+has-props
+

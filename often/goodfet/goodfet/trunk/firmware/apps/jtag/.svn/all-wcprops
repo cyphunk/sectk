@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/goodfet/!svn/ver/127/trunk/firmware/apps/jtag
+END
+jtag.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/goodfet/!svn/ver/121/trunk/firmware/apps/jtag/jtag.c
+END
+jtag430x2.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/goodfet/!svn/ver/127/trunk/firmware/apps/jtag/jtag430x2.c
+END
+Readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/goodfet/!svn/ver/38/trunk/firmware/apps/jtag/Readme.txt
+END
+jtag430.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/goodfet/!svn/ver/123/trunk/firmware/apps/jtag/jtag430.c
+END
+jtag430asm.S
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/goodfet/!svn/ver/73/trunk/firmware/apps/jtag/jtag430asm.S
+END

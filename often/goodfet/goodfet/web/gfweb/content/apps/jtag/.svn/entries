@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/apps/jtag
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-06-18T20:03:00.100367Z
+40
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+jtag.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+2530a75dba270dc15eb971567babcf49
+2009-06-18T20:03:00.100367Z
+40
+travisutk
+
+jtag.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+d93e4aaacfbd587f6f8422b9575eaf03
+2009-06-18T20:03:00.100367Z
+40
+travisutk
+

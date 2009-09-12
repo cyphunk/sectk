@@ -1,0 +1,17 @@
+<h1>goodfet.spiflash</h1>
+
+<a href="http://www.flickr.com/photos/travisgoodspeed/3839781804/"
+title="goodfet.spiflash by Travis Goodspeed, on Flickr">
+<img src="http://farm3.static.flickr.com/2521/3839781804_1d05e8a48e_o.png"
+width="494" height="345" alt="goodfet.spiflash" /></a>
+
+<a href="http://www.flickr.com/photos/travisgoodspeed/3839800528/"
+title="GoodFET SPI Flash Pinout by Travis Goodspeed, on Flickr">
+<img src="http://farm3.static.flickr.com/2577/3839800528_65e6430feb_o.png"
+width="420" height="412" alt="GoodFET SPI Flash Pinout" /></a>
+
+
+<p>N.B., Unlike I2C and SPI EEPROM devices, SPI Flash devices rarely have
+internal pulling resistors on the !WP and !HOLD pins.  You must explicitly
+pull these up.</p>
+

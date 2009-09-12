@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/goodfet/!svn/ver/89/trunk/firmware/tests/blink
+END
+blink.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/goodfet/!svn/ver/19/trunk/firmware/tests/blink/blink.c
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/goodfet/!svn/ver/21/trunk/firmware/tests/blink/README.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/goodfet/!svn/ver/89/trunk/firmware/tests/blink/Makefile
+END

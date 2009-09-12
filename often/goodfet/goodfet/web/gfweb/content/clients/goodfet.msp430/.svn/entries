@@ -1,0 +1,52 @@
+8
+
+dir
+128
+https://goodfet.svn.sourceforge.net/svnroot/goodfet/web/gfweb/content/clients/goodfet.msp430
+https://goodfet.svn.sourceforge.net/svnroot/goodfet
+
+
+
+2009-07-16T15:12:34.954633Z
+61
+travisutk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+12e2690d-a6be-4b82-a7b7-67c4a43b65c8
+
+goodfet.msp430.html
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+f15e13dd44e9b14bc6088bd14951b74a
+2009-07-16T15:12:34.954633Z
+61
+travisutk
+
+goodfet.msp430.yaml
+file
+
+
+
+
+2009-09-11T18:49:49.000000Z
+9d01655b226ca653e32f6d72b9c246fe
+2009-06-22T10:15:27.112526Z
+50
+travisutk
+

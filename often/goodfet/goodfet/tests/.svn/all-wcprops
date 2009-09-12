@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svnroot/goodfet/!svn/ver/128/tests
+END
+msp430x2
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svnroot/goodfet/!svn/ver/128/tests/msp430x2
+END
+msp430x2.zsh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/goodfet/!svn/ver/128/tests/msp430x2.zsh
+END
+cc
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svnroot/goodfet/!svn/ver/95/tests/cc
+END
+monitor
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svnroot/goodfet/!svn/ver/95/tests/monitor
+END
+cc.zsh
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svnroot/goodfet/!svn/ver/94/tests/cc.zsh
+END
+spiflash
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svnroot/goodfet/!svn/ver/117/tests/spiflash
+END
+monitor.zsh
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svnroot/goodfet/!svn/ver/94/tests/monitor.zsh
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svnroot/goodfet/!svn/ver/128/tests/Makefile
+END

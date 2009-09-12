@@ -1,0 +1,20 @@
+<h1>I2C Application</h1>
+
+<p>This application allows for communication by I2C, the Inter-IC Bus.
+Use the following pintout, which is similar to the JTAG pinout.</p>
+
+<p>TODO, image goes here.</p>
+
+<h2>Clients</h2>
+
+<p>Please write one.</p>
+
+<h2>Development</h2>
+
+<p>Prior to any transaction, the SETUP (0x10) verb should be sent to the
+I2C application to properly set the I/O directions and values.
+The START (0x20), STOP (0x21), READ (0x00), and WRITE (0x01) verbs are used
+for transactions, with WRITE returning the acknowledge bit.</p>
+
+<p>Please note that I2C application has yet to be tested.  This should be
+completed by June 17 at the latest.</p>
