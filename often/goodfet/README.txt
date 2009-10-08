@@ -1,5 +1,3 @@
-WORK IN PROGRESS
-
 GoodFET bit jigging platform from Travis Goodspeed:
 http://goodfet.sourceforge.net/
 
@@ -18,28 +16,33 @@ http://www.mikrocontroller.net/articles/MSPGCC
 
 3. Make firmware
    cd trunk/firmware && make
-If you get an error, make sure that msp430 gcc is in your PATH.
+If you get an error, make sure that msp430 gcc is installed properly and that it is in your PATH.
 
 4. Install firmware
-Change the ttyUSB0 line in trunk/firmware/Makefile:
-   #GOODFET?=/dev/ttyUSB0
-   GOODFET?=/dev/tty.usbserial-A6007O8a
-ls /dev/tty.* to determine the proper device.  Now install the firmware:
+The Makefile looks for the GoodFET at /dev/ttyUSB0 by default.  On OSX FTDI serial devices are more commonly found on /dev/tty.usbserial-*.  Set the GOODFET enviornment variable to the handle found on your machine (ls -l /dev/tty.*):
+   export GOODFET=/dev/tty.usbserial-A6007O8a
+Now install firmware:
    make install
 
 5. Dump BSL
+This is a the step Travis recommends in the tutorial.
    goodfet.msp430 dump bsl.hex 0xC00 0xFFF
+This is the step at which you will need to plug your target MSP430 up to the goodfet.  I dont have a target so im skipping this step.  Instead I will try some of the monitoring and test applications:
+
+5. Check IVT and Test on goodfet
+   goodfet.monitor ivt
 This appears to get stuck, the LED's go on for a split second and then are off.  The common header "Initilizing MSP430" from the tutorial is not printed to the console.  When pressing ctrl+c I get:
-Traceback (most recent call last):
-  File "/usr/local/bin/goodfet.msp430", line 25, in <module>
-    client.MSP430setup();
-  File "/Users/cyphunk/sectk/often/goodfet/goodfet/trunk/client/GoodFETMSP430.py", line 20, in MSP430setup
-    self.writecmd(self.MSP430APP,0x10,0,None);
-  File "/Users/cyphunk/sectk/often/goodfet/goodfet/trunk/client/GoodFET.py", line 60, in writecmd
+  File "/goodfet/goodfet/trunk/client/GoodFET.py", line 60, in writecmd
     self.readcmd(blocks);  #Uncomment this later, to ensure a response.
-  File "/Users/cyphunk/sectk/often/goodfet/goodfet/trunk/client/GoodFET.py", line 63, in readcmd
+  File "/goodfet/trunk/client/GoodFET.py", line 63, in readcmd
     self.app=ord(self.serialport.read(1));
   File "/Library/Python/2.5/site-packages/serial/serialposix.py", line 452, in read
     ready,_,_ = select.select([self.fd], [], [], self._timeout)
 KeyboardInterrupt
 
+After talking to travis he suggested that Pin 33 of the MSP430 was not properly soldered.  Sure enough I had not bonded it properly during soldering.
+"The log shows that the crystal is proper, the timing works, and thetransmit pin of the MSP430 are all properly soldered.  Being able toprogram it means that the pins of the FTDI are properly soldered. The receive pin of the MSP430 is not properly soldered, and because ofthis the FET cannot receive traffic from the GoodFET.  It is pin 33,on the corner opposite the chip's orientation marking." -- travis
+
+After correcting this (http://www.flickr.com/photos/deadhacker/3915240445/) commands such as goodfet.monitor ivt, goodfet.monitor test -- both work.
+
+NOTE: if you get the message "Verb 00 is wrong.  Incorrect firmware?" Travis suggest that this is an OSX issue when you execute the first command with the GoodFET. Attempt the command again.

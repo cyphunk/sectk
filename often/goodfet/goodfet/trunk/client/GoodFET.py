@@ -33,8 +33,11 @@ class GoodFET:
         self.serialport = serial.Serial(
             port,
             #9600,
+            #57600,
+            #230400, # nothing but 115200 works
             115200,
-            parity = serial.PARITY_NONE
+            parity = serial.PARITY_NONE,
+            timeout = 3
             )
         #Drop DTR, which is !RST, low to begin the app.
         self.serialport.setDTR(0);
@@ -44,6 +47,9 @@ class GoodFET:
         #Read and handle the initial command.
         #time.sleep(1);
         self.readcmd(); #Read the first command.
+
+	#print "self.verb: 0x%x" % self.verb
+
         if(self.verb!=0x7F):
             print "Verb %02x is wrong.  Incorrect firmware?" % self.verb;
         #print "Connected."
@@ -56,7 +62,9 @@ class GoodFET:
         if count!=0:
             for d in data:
                 self.serialport.write(chr(d));
-        
+		#print "	serialport.write(0x%x)" % d
+        #print "write done (count=%d)" % count
+	#print "blocks for readcmd(): %d" % blocks
         self.readcmd(blocks);  #Uncomment this later, to ensure a response.
     def readcmd(self,blocks=1):
         """Read a reply from the GoodFET."""
@@ -77,6 +85,7 @@ class GoodFET:
     def peekbyte(self,address):
         """Read a byte of memory from the monitor."""
         self.data=[address&0xff,address>>8];
+	#print "peekbyte(0x%x)" % address
         self.writecmd(0,0x02,2,self.data);
         #self.readcmd();
         return ord(self.data[0]);
