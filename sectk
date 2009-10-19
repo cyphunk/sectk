@@ -27,6 +27,7 @@ case "$1" in
 	;;
   cleanosx)
 	find $2 -name .DS_Store -exec rm {} \;
+	echo "showing all remaining . files (only .DS_Store should have been deleted)"
 	find $2 -name .\*
 	;;
   cleanalldot)

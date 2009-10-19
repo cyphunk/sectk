@@ -1,0 +1,71 @@
+#! /usr/bin/env python
+
+symlist = []
+
+def load_symlist(symlist_file = "symlist.txt"):
+  global symlist
+  f = open(symlist_file, "r")
+  for a in f:
+    symlist.append(a.strip())
+  f.close()
+
+pre = {
+	# FTD2XX_API FT_STATUS WINAPI FT_Write( FT_HANDLE ftHandle, LPVOID lpBuffer, DWORD nBufferSize, LPDWORD lpBytesWritten);
+	'FT_Write': """printf("FT_Write(%p, %p, nBufferSize=%d, %p)\\n", a, b, c, d);""",
+	'FT_GetQueueStatus': """printf("FT_GetQueueStatus(handle=%p, rxBytes=%p)\\n", a, b);"""
+}
+
+post = {
+	'FT_Write': """printf("ret = %d\\n", ret);""",
+	'FT_GetQueueStatus': """printf("ret = %d, *rxBytes=%d\\n", ret, *(int*)b);"""
+}
+
+def create_wrapperfile(output = "wrapper.c"):
+  f = open(output, "w")
+  print >>f, """\
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+void *wrapped_lib;
+
+"""
+
+  for sym in symlist:
+    print >>f, """
+long %s(void *a, void *b, void *c, void *d, void *e, void *f, void *g, void *h, void *i) {
+    printf("Someone called %s\\n");
+    long (*fptr)(void *a, void *b, void *c, void *d, void *e, void *f, void *g, void *h, void *i);
+    long ret;
+    fptr = dlsym(wrapped_lib, "%s");
+
+    if (!fptr) {
+	fprintf(stderr, "Could not resolve symbol `%s': %%s\\n", dlerror());
+	exit(1);
+    }
+
+    %s
+    ret = fptr(a, b, c, d, e, f, g, h, i);
+    %s
+    return ret;
+}""" % (sym, sym, sym, sym, pre.get(sym, ""), post.get(sym, ""))
+  f.close()
+
+def create_renamefile(output = "rename.txt"):
+  f = open(output, "w")
+  for sym in symlist:
+    print >>f, "%s their_%s" % (sym, sym)
+  f.close()
+
+if __name__ == '__main__':
+  import sys
+  load_symlist()
+
+  if "rename" in sys.argv:
+    create_renamefile()
+
+  if "wrapper" in sys.argv:
+    create_wrapperfile()

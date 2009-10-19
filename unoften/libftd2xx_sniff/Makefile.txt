@@ -1,0 +1,10 @@
+all: libftd2xx_sniff.so
+	
+libftd2xx_sniff.so: wrapper.c custom.c Makefile
+	gcc -nostartfiles -static -shared -fPIC wrapper.c custom.c -ldl -o libftd2xx_sniff.so
+
+wrapper.c: symlist.txt gen-wrap
+	./gen-wrap wrapper
+
+clean:
+	rm -f *.so *.o wrapper.c 
