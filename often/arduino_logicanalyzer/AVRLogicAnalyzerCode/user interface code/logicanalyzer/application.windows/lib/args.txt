@@ -1,0 +1,3 @@
+ 
+logicanalyzer
+logicanalyzer.jar,core.jar,serial.jar,RXTXcomm.jar
