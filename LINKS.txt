@@ -1,0 +1,8 @@
+Herein are links to tools and packages too large to include a local copy.
+
+
+AVR Studio:
+www.atmel.com/avrstudio
+Assemble, Disassemble (hex file) and program for most AVR chips. If the
+gnu avr objdump or disassembler of your choice doesn't support the target
+it is worth trying in AVR Studio.

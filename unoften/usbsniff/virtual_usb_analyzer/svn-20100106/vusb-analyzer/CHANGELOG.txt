@@ -1,0 +1,15 @@
+vusb-analyzer 1.1
+-----------------
+
+- Includes support for Linux usbmon logs. (beta)
+
+  This code was contribued by Christoph Zimmermann. The usbmon
+  support hasn't been tested as extensively as the other formats,
+  and it doesn't support all vusb-analyzer features, but other
+  than that it should be quite usable and stable.
+
+vusb-analyzer 1.0
+-----------------
+
+Intial public release.
+

@@ -1,0 +1,105 @@
+#!/usr/bin/env python
+#
+# Virtual USB Analyzer GUI
+# Micah Dowty <micah@vmware.com>
+#
+# Copyright (C) 2005-2009 VMware, Inc. Licensed under the MIT
+# License, please see the README.txt. All rights reserved.
+#
+
+VERSION = "1.1"
+
+import sys, os, gtk
+from VUsbTools import Views, Log, Diff, Decode
+
+def main(filename, tailMode=False):
+    ui = Views.MainWindow()
+    ui.window.connect("destroy", gtk.main_quit)
+    ui.window.set_title("%s - VUsb Analyzer" % os.path.basename(filename))
+
+    parser = Log.chooseParser(filename)
+    sink = Log.QueueSink(ui.handleEvent)
+    follower = Log.Follower(filename, parser(sink.queue), ui.status.queue, tailMode)
+    Decode.attachView(ui)
+
+    gtk.gdk.threads_init()
+    follower.start()
+    try:
+        gtk.main()
+    finally:
+        follower.stop()
+
+def diffMain(files, tailMode=False):
+    ui = Diff.DiffWindow()
+    ui.window.connect("destroy", gtk.main_quit)
+    ui.window.set_title("%s - VUsb Analyzer" % " / ".join([
+        os.path.basename(f) for f in files]))
+
+    gtk.gdk.threads_init()
+    followers = []
+
+    for f, view in zip(files, ui.views):
+        parser = Log.chooseParser(f)
+        sink = Log.QueueSink(lambda event, view=view: ui.handleEvent(event, view))
+        Decode.attachView(view)
+        follower = Log.Follower(f, parser(sink.queue), ui.status.queue, tailMode)
+        follower.start()
+        followers.append(follower)
+
+    try:
+        gtk.main()
+    finally:
+        for follower in followers:
+            follower.stop()
+
+def profileMain(filename):
+    import Queue
+    parser = Log.chooseParser(filename)(Queue.Queue())
+    for line in open(filename):
+        parser.parse(line)
+
+def usage():
+    print ("usage: %s [-t] vmx.log [vmx.log]\n"
+           "\n"
+           "PyGTK frontend for the virtual USB analyzer\n"
+           "Micah Dowty <micah@vmware.com>\n"
+           "Version %s\n"
+           "\n"
+           "  -t  Tail mode, start from the end of a growing log file.\n"
+           "\n"
+           "Supported log formats:\n"
+           "   VMware VMX log file (*.log)\n"
+           "   Exported XML from Ellisys Visual USB (*.xml)\n"
+           "   Linux usbmon log, raw ASCII format (*.mon)\n"
+           "\n"
+           "Also supports transparent decompression of gzipped\n"
+           "(*.gz) files. Logs may be appended to while this \n"
+           "program is running.\n"
+           "\n"
+           "For best results with Ellisys logs, enable 'Expand\n"
+           "transactions packets' but not 'Expand consecutive\n"
+           "elements' while exporting.\n"
+           "\n"
+           "Two log files can be specified, in order to invoke\n"
+           "diff mode.\n"
+           % (sys.argv[0], VERSION))
+    sys.exit(1)
+
+if __name__ == "__main__":
+    tailMode = False
+    args = sys.argv[1:]
+
+    while args and args[0][0] == '-':
+        opt = args[0]
+        if opt == '-t':
+            tailMode = True
+        else:
+            usage()
+        del args[0]
+
+    if len(args) == 1:
+        main(args[0], tailMode)
+    elif len(args) == 2:
+        diffMain(args, tailMode)
+    else:
+        usage()

@@ -1,0 +1,68 @@
+8
+
+dir
+20
+https://vusb-analyzer.svn.sourceforge.net/svnroot/vusb-analyzer/trunk
+https://vusb-analyzer.svn.sourceforge.net/svnroot/vusb-analyzer
+
+
+
+2009-12-03T21:23:34.083497Z
+18
+micahjd
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+31ffde5e-7fae-4e65-b3f5-864f19086f7f
+
+VUsbTools
+dir
+
+vusb-analyzer
+file
+
+
+
+
+2010-01-06T12:54:24.000000Z
+679cd0bfb83853bb4fec2bf0f7a1bcf6
+2009-12-03T21:23:34.083497Z
+18
+micahjd
+has-props
+
+CHANGELOG.txt
+file
+
+
+
+
+2010-01-06T12:54:24.000000Z
+a8d8e9ffc0973ef817e3fabe2a60a5a0
+2009-12-03T21:23:34.083497Z
+18
+micahjd
+
+README.txt
+file
+
+
+
+
+2010-01-06T12:54:24.000000Z
+9f9df2e8aa08880db6fe3fa490e9d128
+2009-12-03T21:18:06.025057Z
+17
+micahjd
+

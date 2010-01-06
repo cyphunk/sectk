@@ -1,0 +1,28 @@
+general:
+========
+- monitor pins for changing ones (with pullups on)
+- get High impedance pins first by disabling the pullups?
+- look for changing pins with pullups on/off
+- and those which aren't changes by the pullups! (100k -> nRST?)
+- try Lo pins for nRST first, Hi pins for TMS/TCK/TDI (with pullups on)
+
+circuit board:
+==============
+- maybe with 3.3 and 5V suooprt?
+- USB connector, pl2303 or so integrated?
+
+AVR:
+====
+- shift TMS and TDI + get TDO support (openwince-jtag package)
+- ATmega32L at 7.x MHz
+- firmware update + show version support?
+
+GTK code:
+=========
+- show low pins
+- IO entry field
+- RST support
+- retry on timeout
+- IDCODE support?
+- openwince-jtag backend?
+

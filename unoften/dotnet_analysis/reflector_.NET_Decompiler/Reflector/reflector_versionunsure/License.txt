@@ -1,0 +1,184 @@
+REFLECTOR SOFTWARE LICENSE ("License")
+
+The following sets out the full License with respect to the use of the Reflector Software. 
+
+IMPORTANT NOTICE: Please read this License carefully.
+
+BY DOWNLOADING, INSTALLING AND/OR USING THE SOFTWARE, OR CLICKING "I ACCEPT" WHEN PROMPTED, YOU ACCEPT ALL OF THE TERMS AND CONDITIONS OF THIS LICENSE. THIS LICENSE IS A LEGALLY BINDING AGREEMENT BETWEEN YOU AND RED GATE SOFTWARE LIMITED. IF YOU ARE ACCEPTING THIS LICENSE ON BEHALF OF ANOTHER PERSON OR LEGAL ENTITY, YOU REPRESENT AND WARRANT THAT YOU HAVE FULL LEGAL AUTHORITY TO ACCEPT ON BEHALF OF AND BIND THAT PERSON OR LEGAL ENTITY TO THIS LICENSE. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS LICENSE, YOU MUST NOT DOWNLOAD, INSTALL OR USE THE SOFTWARE.
+You should print and keep a copy of this License for your future reference.
+
+1. Definitions 
+
+1.1 In this License, the following terms shall have the following meanings:
+
+"Intellectual Property Rights" means patents, registered designs, registered trade and service marks, registered copyright and modifications to and applications for any of the foregoing and the right to apply for protection for such registered rights anywhere in the world and inventions, discoveries, copyright, database right, unregistered trade or service marks, brand names or know-how and any similar or equivalent rights whether capable of registration or not arising, applied for or granted under the laws of any country.
+
+"License" means the terms and conditions set out in this software License agreement. 
+
+"Licensee" means (a) the person who installs the Software on a computer for his or her own personal use; or (b) where the Software is installed on a computer on behalf of an employer, another person or entity, the employer, other person or entity on whose behalf the Software has been installed. 
+
+"Licensor" means Red Gate Software Limited, a company registered in the United Kingdom with company number 3857576 and having its registered office at St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, United Kingdom. 
+
+"Software" means the version of the Reflector.exe file of Licensor's .NET class browsing software product known as "Reflector" that is current as at the date on which the Licensee accepts the terms of this License, and any related manuals, help files or other documentation.
+
+2. Interpretation 
+
+2.1 In this License:
+
+(a) "install", "installing", "installation" or "installed" in connection with the Software includes the downloading of the Software from the Licensor's or any third party's remote server; 
+
+(b) "includes" or "including" shall be treated as being by way of example and shall not limit the general applicability of any preceding words. 
+
+(c) the headings to the clauses of this License are for convenience only and will not affect its construction or interpretation. 
+
+3. Acceptance of License 
+
+3.1 The Licensee will be deemed to have accepted the terms of this License by downloading, installing and/or using the Software on any computer, or clicking the "I Accept" button. 
+
+4. License
+
+4.1 In consideration of the mutual rights and obligations under this License, and subject to the provisions of this clause 4, the Licensor grants to the Licensee for the term of this License a limited, personal, non-exclusive, non-sub-licensable and non-transferable License: 
+
+(a) to use and copy the Software for the Licensee's own personal or internal business purposes on any computer owned, leased and/or controlled by the Licensee or its employer or organisation for whom the Licensee has installed the Software; 
+
+(b) to make one copy of the Software in machine readable form for normal operational security and back-up purposes. This License will apply to such copy as it applies to the original copy of the Software installed by the Licensee. Such copy and the media on which it is stored will be the property of the Licensor, and the Licensee shall ensure that such copy bears the Licensor's proprietary notices described in clause 5.2 below.
+
+4.2 Save as set out in this License, the Licensee has no right to use, incorporate into other products, copy, publish, display, modify, translate the Software or any modification, adaptation or copy of the Software or any part thereof, nor to decompile, reverse engineer, or disassemble the source code of the Software either in whole or in part, except to the limited extent permitted by mandatory law notwithstanding contractual prohibition. 
+
+4.3 The Licensee may not rent, lease, sub-license, sell, assign or otherwise transfer the Software to any other person or permit other individuals to use the Software without the prior written consent of the Licensor. 
+
+4.4 The Licensee will not use the Software:
+
+(a) to manufacture or distribute a product that is substantially similar to or competitive with the Software;
+
+(b) in a manner that infringes or fails to comply with any applicable laws or regulations; 
+
+(c) for a purpose or in a manner that infringes the Intellectual Property Rights of any third party; 
+
+(d) in any critical healthcare systems, or any other systems the failure of which could cause or contribute to personal injury or death; 
+
+(e) in a manner otherwise not permitted by this License.
+
+4.5 The Licensee will not be entitled to receive any hard-copy documentation, technical support, telephone assistance, enhancements, new versions or updates to the Software under this License ("support"). The Licensor may provide such support via its website from time to time, but will not be obliged to do so and any such support will be provided in its sole discretion and in accordance with any separate terms specified by the Licensor. 
+
+5. Ownership of Intellectual Property Rights 
+
+5.1 The Licensee acknowledges that:
+
+(a) all Intellectual Property Rights in or relating to the Software are and shall remain the exclusive property of the Licensor; 
+
+(b) save as expressly granted under this License, the Licensee has no rights in the Software. 
+
+5.2 The Licensee agrees that it shall not remove or alter any trade marks, copyright notices or similar proprietary devices, including any electronic watermarks or other identifiers, that may be incorporated in the Software or any copy of the Software.
+
+6. Confidentiality
+
+6.1 The structure, organisation and source code of the Software are the valuable trade secrets and proprietary confidential information of the Licensor and its licensors. The Licensee agrees not to provide or disclose any confidential information in the Software or derived from it to any third party. 
+
+6.2 The provisions of clause 6.1 will not apply to the extent that: 
+
+(a) such information is in the possession of the Licensee free from any restriction as to its use or disclosure having been obtained otherwise than from the Licensor for the purposes of this License; 
+
+(b) the Licensee can demonstrate that such information is in the public domain (other than as a result of an unauthorised disclosure); or 
+
+(c) such information is required to be disclosed by the Licensee pursuant to a statutory or regulatory obligation or court order. 
+
+6.3 No information to which clause 6.2 applies shall be disclosed to a third party unless and until the Licensee has:
+
+(a) given, where practicable, five (5) working days' written notice to the Licensor of such proposed disclosure; 
+
+(b) consulted with the Licensor; and 
+
+(c) agreed with the Licensor the content of the disclosure, 
+
+provided that the Licensor shall not limit the disclosure in a manner which would prevent the Licensee from complying with a statutory or regulatory obligation or court order. 
+
+7. Disclaimer
+
+7.1 The Software is provided to the Licensee on an "AS IS" basis and with no representation, guarantee or warranty of any kind as to its functionality, quality, performance, suitability or fitness for purpose. Except as expressly set out in this License, the Licensor hereby excludes, to the fullest extent permissible by law, all express and implied terms, conditions, warranties and representations (including any implied terms that the Software will meet the Licensee's requirements or that its operation will be uninterrupted or error free). Except as expressly set out in this License, the Licensee assumes the entire risk as to the quality and performance of the Software and should the Software prove defective, the Licensee assumes the entire cost of all necessary servicing, repair and/or correction. 
+
+8. Limitation and exclusion of liability
+
+8.1 Licensor's liability for: 
+
+(a) personal injury or death resulting from the Licensor's negligence; 
+
+(b) fraudulent misrepresentation; 
+
+(c) under Part I of the Consumer Protection Act 1987; or 
+
+(d) for any other matter for which liability cannot be excluded by law, 
+
+is not excluded or limited by this License, even if any other term of this License would otherwise suggest that this might be the case. 
+
+8.2 Subject to clause 8.1, the Licensor shall not be liable under or in relation to this License (whether in contract, tort (including negligence) or otherwise) for any: 
+
+(a) loss of profits; 
+
+(b) loss of sales; 
+
+(c) loss of revenue; 
+
+(d) loss of goodwill or reputation; 
+
+(e) loss of software or data; 
+
+(f) loss of use of hardware, software or data; 
+
+(g) wasted management or other staff time; 
+
+(h) indirect, special or consequential loss; 
+
+even if the licensor has been advised in advance of the possibility of such loss or damage. 
+
+8.3 Subject to clauses 8.1 and 8.2, the Licensor's maximum aggregate liability under or in connection with this License (whether the liability arises in contract, tort (including negligence) or otherwise) shall be limited to ﾣ500. 
+
+9. Licensee indemnity
+
+9.1 The Licensee shall indemnify the Licensor against any loss or damage suffered or incurred by the Licensor as a result of any claim by a third party arising out of or in relation to a breach by the Licensee of clauses 4.4(b) to (e). 
+
+9.2 In relation to the indemnity at clause 9.1: 
+
+(a) the Licensor use all reasonable efforts to tell the Licensee as soon as the Licensor becomes aware of a claim and give the Licensee as much information as the Licensor can in relation to it; 
+
+(b) the Licensor shall not make any admissions in relation to the claim without using its reasonable efforts to obtain the permission of the Licensee first; and 
+
+(c) if the Licensor asks the Licensee to do so, the Licensee shall let the Licensor take over dealing with the claim on the Licensee's behalf. 
+
+10. Term and termination
+
+10.1 This License shall commence upon the Licensee's acceptance of its terms by the downloading, installation or use of the Software or the clicking of the "I Accept" button, and shall continue until terminated in accordance with its terms. 
+
+10.2 The Licensee's rights under this License will terminate automatically if the Licensee fails to comply with any provision of this License, or if the Licensee de-installs or destroys the Software. 
+
+10.3 The Licensor may terminate this License immediately if it reasonably suspects that the Licensee is using the Software in a manner that breaches any third party's Intellectual Property Rights. 
+
+10.4 On termination of this License for any reason whatsoever, the Licensee must de-install the Software and destroy all copies of the Software, including all components of it, in the Licensee's power, possession or control. 
+
+10.5 Termination of this License for whatever reason shall not affect the rights, duties and liabilities of either party accrued prior to termination. 
+
+10.6 The provisions of clauses 5, 6, 7, 8, 9, 10 and 11 will survive termination of this License. 
+
+11. Governing law and jurisdiction
+
+11.1 This License will be governed by and construed in accordance with the laws of England. Both parties submit to the exclusive jurisdiction of the English courts in relation to any dispute concerning this License, but the Licensor is also entitled to apply to any court worldwide for injunctive and other remedies in order to protect or enforce its confidential information and Intellectual Property Rights. 
+
+12. Compliance with applicable law
+
+12.1 The Licensee acknowledges and agrees that notwithstanding the fact that English law governs this License pursuant to clause 11.1, the Licensee may be subject to additional laws or regulations in other jurisdictions with respect to the Licensee's use of the Software. The Licensee will comply with all applicable laws and regulations in any applicable jurisdiction that apply to the Software including any applicable export laws or regulations. 
+
+13. Severability
+
+13.1 If any clause or part of the License is found by any court, body or authority of competent jurisdiction to be illegal, invalid or unenforceable then that provision will, to the extent required, be severed from the License and will be ineffective without, as far as is possible, modifying any other clause or part of the License and this will not affect any other provisions of the License which will remain in full force and effect. 
+
+14. No Waiver
+
+14.1 No failure or delay by any party to exercise any right, power or remedy will operate as a waiver of it nor will any partial exercise preclude any further exercise of the same, or of some other right, power or remedy. 
+
+15. No Third Party Rights
+
+15.1 The parties to this License do not intend that any of its terms will be enforceable by virtue of the Contracts (Rights of Third Parties) Act 1999 by any person not a party to it and all rights by virtue of the Contracts (Rights of Third Parties) Act 1999 are hereby excluded. 
+
+16. Entire Agreement
+
+16.1 This License contains all the terms which the parties have agreed in relation to the subject matter of this License, and supersedes any prior written or oral agreements, representations (save for any fraudulent misrepresentation, fraud or concealment) or understandings between the parties in relation to such subject matter. 

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svnroot/vusb-analyzer/!svn/ver/16/trunk/VUsbTools
+END
+Diff.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vusb-analyzer/!svn/ver/1/trunk/VUsbTools/Diff.py
+END
+Views.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/vusb-analyzer/!svn/ver/1/trunk/VUsbTools/Views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/vusb-analyzer/!svn/ver/1/trunk/VUsbTools/__init__.py
+END
+Style.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/vusb-analyzer/!svn/ver/3/trunk/VUsbTools/Style.py
+END
+Log.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vusb-analyzer/!svn/ver/16/trunk/VUsbTools/Log.py
+END
+Decode.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vusb-analyzer/!svn/ver/1/trunk/VUsbTools/Decode.py
+END
+Struct.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vusb-analyzer/!svn/ver/1/trunk/VUsbTools/Struct.py
+END
+Types.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vusb-analyzer/!svn/ver/13/trunk/VUsbTools/Types.py
+END

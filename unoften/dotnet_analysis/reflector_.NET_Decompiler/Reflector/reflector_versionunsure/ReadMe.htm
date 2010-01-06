@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+<style>
+body    { font-family: Verdana, Tahoma, Arial, Helvetica; font-size: 70%; color: #444444; }
+td      { line-height: 12pt; font-family: Verdana, Tahoma, Arial, Helvetica; font-size: 70%; color: #444444; }
+b       { color: #000000; font-weight: bold; }
+p       { margin-top: "0.2em"; margin-bottom: "1.0em"; }
+a       { color: #000080; }
+a:hover { color: #0000c0; }
+h6      { font-size: 120%; margin-bottom: "0"; }
+</style>
+
+</head>
+
+
+<body bgcolor="#ffffff">
+
+<table width="520">
+
+<tr>
+<td>
+
+<p>
+<h6>.NET Reflector 5.0 Release Notes</h6>
+</p>
+
+28 December 2006
+
+<hr size="1" color="#cccccc">
+
+<p>
+Reflector is a class browser for .NET components. 
+It allows browsing and searching the meta data, IL instructions, resources and XML documentation stored in a .NET assembly.
+Reflector was first released in October 2000 running on .NET Framework 1.0 Beta.
+</p>
+
+<p>
+<b>LINQ and .NET Framework 3.5:</b>
+Reflector supports query expressions and other concepts introduced in C# 3.5.
+To enable this feature select ".NET 3.5" under View, Options, Disassembler, Optimization.
+</p>
+
+<p>
+<b>.NET Framework compatibility:</b>
+Reflector runs on all versions of the .NET Framework using its own assembly loading infrastructure which does not rely on the Reflection API.
+For example, Reflector can load .NET Framework 2.0 assemblies without having the .NET Framework 2.0 installed.
+</p>
+
+<p>
+<b>Assembly Lists:</b>
+When launched for the first time, Reflector allows you to choose a default set of assemblies.
+The list of assemblies is then stored in the Reflector.cfg file and will be loaded next time you open the program.
+Reflector allows creating multiple assembly lists and switching between the lists using the File, Open List dialog.
+To choose a different set of default assemblies for the current assembly list you should remove all assemblies from the list (DEL)
+and invoke the Refresh command (F5).
+</p>
+
+<p>
+<b>Assembly Cache:</b>
+When resolving an assembly reference, Reflector will first search the local path next to the assembly holding the reference and then falls back to the cache directories defined in the Reflector.cfg file. 
+Reflector does not search the Global Assembly Cache (GAC) unless you add "%SystemRoot%\Assembly" to the cache directories list.
+</p>
+
+<p>
+<b>Assembly Versioning:</b>
+By default, assembly version numbers are ignored when resolving type and member references.
+You can enable side-by-side versioning in the options dialog but it is suggested to avoid this if possible.
+</p>
+
+
+<p>
+<b>Add-Ins:</b>
+Information about the Reflector add-in model can be found <a href="http://www.codeplex.com/reflectoraddins" target="_blank">here</a>.
+</p>
+	
+<p>
+The most recent version of .NET Reflector is available <a href="http://www.aisto.com/roeder/dotnet" target="_blank">here</a>.<br/>
+</p>
+	
+<hr size="1" color="#cccccc">
+<i>Disclaimer: This software is provided "AS IS" with no warranties of any kind. The entire risk arising out of the use or performance of the software is with you.</i>
+	
+</td>
+</tr>
+	
+</table>
+	
+</body>
+
+</html>
+
+
+
