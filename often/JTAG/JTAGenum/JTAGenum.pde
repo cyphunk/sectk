@@ -1,6 +1,6 @@
 /*
  JTAGenum
- Given a Arduino compatible microcontroller ArduinFF scans
+ Given a Arduino compatible microcontroller JTAGenum scans
  pins[] for basic JTAG functionality. After programming 
  your microcontroller open a serial terminal with 115200 
  baud and send 'h' to see usage information.
