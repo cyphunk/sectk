@@ -762,6 +762,7 @@ void loop() {
                                 "    active tdo lines found with loopback test.\n"
                                 "\n"
                                 "b > shift_bypass\n"
+                                "    currently broken. need to add tck\n"
                                 "\n"
                                 "x > sample (aka boundary scan)\n"
                                 "\n"
