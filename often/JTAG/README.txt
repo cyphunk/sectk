@@ -1,5 +1,5 @@
 JTAGenum:
-http://deadhacker.com
+http://deadhacker.com/2010/02/03/jtag-enumeration/
 
 jtagscan:
 http://www.c3a.de/wiki/index.php/JTAG_Finder
