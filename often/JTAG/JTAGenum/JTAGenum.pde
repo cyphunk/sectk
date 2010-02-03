@@ -16,6 +16,9 @@
  IR_LEN+CHAIN_LEN values according to suspected or 
  documented values.
  
+ Further documentation:
+ http://deadhacker.com/2010/02/03/jtag-enumeration/ 
+
 
  This code is an extensive modification and port to Arduino 
  of Lekernel's ArduiNull [1] which was itself inspired by

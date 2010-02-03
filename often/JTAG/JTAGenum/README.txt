@@ -1,7 +1,8 @@
-For questions, help, repository write access or interesting targets:
-cyphunk@gmail.com This document can also be found at:
-http://deadhacker.com/2010/02/03/jtag-enumeration/ Code repository:
+This document can also be found at:
+http://deadhacker.com/2010/02/03/jtag-enumeration/ 
+Code repository:
 http://github.com/cyphunk/sectk/tree/master/often/JTAG/JTAGenum
+For questions, help, changes, repository write access or interesting targets: cyphunk@gmail.com with gpg 0x490F3380
 
 
 Hardware
