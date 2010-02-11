@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0101)http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.IDA.README -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<TITLE>Corelabs site</TITLE>
+<LINK href="./readme_ida_files/corelabs.css" rel="stylesheet" type="text/css">
+</HEAD><BODY>
+	<DIV id="header_container">
+		<TABLE border="0" padding="0" cellpadding="0" cellspacing="0" width="100%">
+
+		<TBODY><TR><TD id="header_left">&nbsp;</TD>
+		<TD id="header_center">
+			<DIV id="header_logo"><A class="logo" href="http://corelabs.coresecurity.com/"><IMG src="./readme_ida_files/logo.gif" width="199" height="66" align="middle"></A></DIV>
+			<DIV class="amenu" valign="bottom"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=area">Areas</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=project">Projects</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=researcher">Researchers</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=publication">Publications</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=advisory">Advisories</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=tool">Tools</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=brainstorming">Brainstormings</A></DIV>
+		</TD>
+		<TD id="header_right">&nbsp;</TD>
+		</TR></TBODY></TABLE>
+	</DIV>
+	<DIV id="content">
+		<DIV id="user_content">
+<P>HeapTracer plugin for IDA<BR>
+This will let you see the evolution of the heap in realtime.</P>
+
+<P>INSTALLING</P>
+
+<UL>
+    <LI>you'll need OpenGL installed and working on your Windows box</LI>
+</UL>
+
+<P><STRONG> a software implementation is installed by default.<BR>
+</STRONG> for hardware acceleration you'll need something specific for your card</P>
+
+<UL>
+    <LI>copy debug/HeapTracer.plw to IDA/plugins</LI>
+    <LI>copy HeapTracer/glut32.dll to IDA</LI>
+</UL>
+
+<P>USING</P>
+
+<P>Specific to IDA</P>
+
+<UL>
+    <LI>In the configuation window (Ctrl-Shift-1 by default):</LI>
+</UL>
+
+<P><STRONG> turn on heap tracing<BR>
+</STRONG> turn on the display window<BR>
+<STRONG> select the heap to draw (yes, you have to know the base address/handle)<BR>
+</STRONG> if you don't know the address, you can select it latter<BR>
+<STRONG> once the application is running, every time you enter the config window you'll see a list of the known heaps with a count of the blocks in heach of them. You can change the heap to draw at any time.<BR>
+</STRONG> If you attach to a process, you can choose to rescan the heap.</P>
+
+<P>For other usage see main README</P>
+
+<P>BUILDING</P>
+
+<P>To build you'll need:</P>
+
+<UL>
+    <LI>Visual Studion Express Edition</LI>
+</UL>
+
+<P>get it free from <A href="http://msdn.microsoft.com/vstudio/express/" onclick="window.open(this.href, &#39;_blank&#39;); return false;">http://msdn.microsoft.com/vstudio/express/</A></P>
+
+<UL>
+    <LI>idasdk (we used 5.1, but 5.0 is also fine).</LI>
+    <LI>change settings for the project</LI>
+</UL>
+
+<P>point the include and library directories to your idasdk copy  change the custom build step to copy the plugin to your IDA directory (or not)</P>
+
+<UL>
+    <LI>if you want to debug the plugin, you'll have to change where IDAg.exe is in project's settings in Visual Studio</LI>
+    <LI>enjoy</LI>
+</UL>
+
+<P>It's also possible to build from the command line using the included makefile. You'll also need to do some changes in order for it to work in your setup. When using the makefile, place the folder HeapTracer inside idasdk/plugins</P>
+
+<P>FEEDBACK</P>
+
+<UL>
+    <LI>Don't let all that people who said that OpenSource doesn't work be right: send feedback, bug reports, ideas, patches, improvements, etc.</LI>
+</UL>
+
+<P>KNOWN ISSUES</P>
+
+<UL>
+    <LI>uhm... some multithreading issues has been solved in this version, and it   usually works pretty well... except sometimes, that it just blocks the hole IDA. If you can find the bug, please, report it back to us!</LI>
+    <LI>For some strange reason IDA, the OpenGL windows and the application fight for user's attention, stealing the focus from each other, and giving it back to nobody... Again, if you understand why this is happening and you can fix it, please, share!</LI>
+    <LI>There is a race condition when two threads are inside, lets say, RtlHeapAlloc() at the same time. The return address for one thread can get mixed up with the return address with the other thread, hence adding the new chunk to the wrong Heap. This can be fixed pretty easily by tracking the thread id together with all the other info in the breakpoints array. We'll do it at some point in the future. If you do it yourself, please... share!</LI>
+</UL>
+
+<P>TODO</P>
+
+<UL>
+    <LI>If you want to contribute and need some ideas, take a look at HeapTracer.cpp at the top of it you can find a nice list of what to do :-)</LI>
+</UL>
+
+<P>enjoy and share!<BR>
+  gera</P>
+
+
+</DIV><DIV id="related">
+<H1>Related information</H1><H2>Tools</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=HeapDraw"><SPAN class="title_title">HeapDraw</SPAN></A>
+</LI></UL></DIV>	</DIV>
+
+
+</BODY></HTML>

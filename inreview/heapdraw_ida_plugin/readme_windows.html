@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0105)http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.Windows.README -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<TITLE>Corelabs site</TITLE>
+<LINK href="./readme_windows_files/corelabs.css" rel="stylesheet" type="text/css">
+</HEAD><BODY>
+	<DIV id="header_container">
+		<TABLE border="0" padding="0" cellpadding="0" cellspacing="0" width="100%">
+
+		<TBODY><TR><TD id="header_left">&nbsp;</TD>
+		<TD id="header_center">
+			<DIV id="header_logo"><A class="logo" href="http://corelabs.coresecurity.com/"><IMG src="./readme_windows_files/logo.gif" width="199" height="66" align="middle"></A></DIV>
+			<DIV class="amenu" valign="bottom"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=area">Areas</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=project">Projects</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=researcher">Researchers</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=publication">Publications</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=advisory">Advisories</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=tool">Tools</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=brainstorming">Brainstormings</A></DIV>
+		</TD>
+		<TD id="header_right">&nbsp;</TD>
+		</TR></TBODY></TABLE>
+	</DIV>
+	<DIV id="content">
+		<DIV id="user_content">
+<P>You can either use ntsd (from Debugging Tools for Windows, not default install) to create logs, for example:</P>
+
+
+<PRE><CODE>C:&gt; ntsd -cf hd.ntsd ping 192.168.1.1</CODE></PRE>
+
+<P>Or attaching to an existing process with -p or -pn.</P>
+
+<P>Or you can inject hookgera.dll into a running process using LoadDll.exe from LoadDll.zip taken from <A href="http://www.codeguru.com/Cpp/W-P/dll/article.php/c105" onclick="window.open(this.href, &#39;_blank&#39;); return false;">http://www.codeguru.com/Cpp/W-P/dll/article.php/c105</A></P>
+
+
+<PRE><CODE>C:&gt; LoadDll /L &lt;PID&gt; c:fullpathtohoogera.dll</CODE></PRE>
+
+<P>This will create a file named output.&lt;pid&gt;.log which you can use with HeapDraw as if it was ltrace format. (hd -t ltrace &lt;output.pid.log)</P>
+
+<P>The command line and usage of the windows version is the same of the linux version, see the README for it.</P>
+
+
+</DIV><DIV id="related">
+<H1>Related information</H1><H2>Tools</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=HeapDraw"><SPAN class="title_title">HeapDraw</SPAN></A>
+</LI></UL></DIV>	</DIV>
+
+
+</BODY></HTML>

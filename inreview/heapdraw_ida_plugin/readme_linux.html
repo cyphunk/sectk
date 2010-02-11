@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0103)http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.Linux.README -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<TITLE>Corelabs site</TITLE>
+<LINK href="./readme_linux_files/corelabs.css" rel="stylesheet" type="text/css">
+</HEAD><BODY>
+	<DIV id="header_container">
+		<TABLE border="0" padding="0" cellpadding="0" cellspacing="0" width="100%">
+
+		<TBODY><TR><TD id="header_left">&nbsp;</TD>
+		<TD id="header_center">
+			<DIV id="header_logo"><A class="logo" href="http://corelabs.coresecurity.com/"><IMG src="./readme_linux_files/logo.gif" width="199" height="66" align="middle"></A></DIV>
+			<DIV class="amenu" valign="bottom"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=area">Areas</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=project">Projects</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=researcher">Researchers</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=publication">Publications</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=advisory">Advisories</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=tool">Tools</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=brainstorming">Brainstormings</A></DIV>
+		</TD>
+		<TD id="header_right">&nbsp;</TD>
+		</TR></TBODY></TABLE>
+	</DIV>
+	<DIV id="content">
+		<DIV id="user_content">
+<P>INSTALLING<BR>
+- you'll need OpenGL and GLUT to compile and run it</P>
+
+<P>COMPILING<BR>
+for compiling the main heapdraw you'll need glut.<BR>
+
+</P><PRE><CODE>g++ main.cpp Heap.cpp draw.cpp -lglut</CODE></PRE>
+
+<P></P>
+
+<P>for compiling log-malloc.so:<BR>
+gcc -nostartfiles -shared -fPIC -g -ldl -o log-malloc.so log-malloc.c</P>
+
+<P>RUNNING<BR>
+
+</P><PRE><CODE>gera@poxiran$ ./heapdraw 
+Use: g [-a] [-q] [-v] [-p pid] [-r region] -R [lo-hi] -t type
+        a       autoregions: automatically find regions
+        q       quiet: don't print found errors
+        v       verbose, more is more
+        p       PID to follow, default is all, 0 is first, other is specific PID
+        r       region to draw (0 is loose region, and it's the default)
+        R       Manually define a region. lo and hi are its limits (can be hex)
+        t       input file type, where type is one of:
+                        ltrace
+                                ltrace -o ls.ltrace -f -tt -i -efork,vfork,clone,malloc,realloc,free,calloc,mmap,munmap,mremap,mprotect,mmap2 /bin/ls
+                        truss
+                                truss -o ls.truss -f -d -l -t !all -u a.out,*::malloc,realloc,free,calloc,fork,vfork,mmap,munmap,mprotect,brk /bin/ls
+                        ntsd
+                                ntsd -cf hd.ini calc.exe</CODE></PRE>
+
+<P></P>
+
+<P>heapdraw will read input from stadard in, so you have to run it like:</P>
+
+
+<PRE><CODE>$ heapdraw &lt;vi.ltrace -t ltrace </CODE></PRE>
+
+<BR>
+    When ran with -a, it will try to separate the heap in contiguos regions, this option is important mainly because if you draw a discontinuos heap where the holes are much bigger than the blocks, you won't see the blocks until you<BR>
+zoom into the right spot. When using -a you'll also want to use -v to see how the regions where created and then -r to select what region to draw.<P>To the same end you can use -R to define a range by hand (format is -R 0x8048000-0x8090000). -R will create a region, but when drawing it will only use the ranges as far as there's any block, so defining a region like 0x8080000-0x9000000 is safe, and should not make everything look too small unless a lot of memory in this range is really used)</P>
+
+<P>The option -p is usefull when you trace through several processes (fork()) and want to only see one process' heap. Have in mind that when selecting a child process, heapdraw will not follow the heap in the parent until it forks, so you will not see the initial state of the heap for the child process.</P>
+
+<P>For graphical hotkeys usage see main README</P>
+
+<P>On linux we usually use ltrace or a preloaded malloc/free hook library on some weird cases. On Solaris we use truss and on windows we used to use an ntsd script that we lost :-(</P>
+
+<P>log-malloc.so must be used as:</P>
+
+
+<PRE><CODE>$ LD_PRELOAD=../log-malloc.so ls -lR .. 2&gt; ls-lr.ltrace</CODE></PRE>
+
+<P>or, if you don't want to use stderr, you can rather do:</P>
+
+
+<PRE><CODE>$ LOG_MALLOC_OUTPUT=ls-lr.ltrace LD_PRELOAD=./log-malloc.so ls -lR .. </CODE></PRE>
+
+<P>if you prefer to use ltrace (for example to attach to a running process<BR>
+after some initialization has already happened):</P>
+
+
+<PRE><CODE>$ ltrace -o ls.ltrace -f -tt -i -efork,vfork,clone,malloc,realloc,free,calloc,mmap,munmap,mremap,mprotect,mmap2 /bin/ls</CODE></PRE>
+
+<BR>
+    or, of course:
+<PRE><CODE>$ ltrace -o ls.ltrace -f -tt -i -efork,vfork,clone,malloc,realloc,free,calloc,mmap,munmap,mremap,mprotect,mmap2 -p `pidof -s bash`</CODE></PRE>
+
+<BR>
+    For Solaris or Windows instructions, follow the usage help of heapdraw.
+</DIV><DIV id="related">
+<H1>Related information</H1><H2>Tools</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=HeapDraw"><SPAN class="title_title">HeapDraw</SPAN></A>
+</LI></UL></DIV>	</DIV>
+
+
+</BODY></HTML>

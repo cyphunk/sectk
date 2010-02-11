@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0090)http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=HeapDraw -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<TITLE>Corelabs site</TITLE>
+<LINK href="./index_files/corelabs.css" rel="stylesheet" type="text/css">
+</HEAD><BODY>
+	<DIV id="header_container">
+		<TABLE border="0" padding="0" cellpadding="0" cellspacing="0" width="100%">
+
+		<TBODY><TR><TD id="header_left">&nbsp;</TD>
+		<TD id="header_center">
+			<DIV id="header_logo"><A class="logo" href="http://corelabs.coresecurity.com/"><IMG src="./index_files/logo.gif" width="199" height="66" align="middle"></A></DIV>
+			<DIV class="amenu" valign="bottom"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=area">Areas</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=project">Projects</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=researcher">Researchers</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=publication">Publications</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=advisory">Advisories</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=tool">Tools</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=brainstorming">Brainstormings</A></DIV>
+		</TD>
+		<TD id="header_right">&nbsp;</TD>
+		</TR></TBODY></TABLE>
+	</DIV>
+	<DIV id="content">
+		<DIV id="user_content">
+
+<H1 id="toc0">What is HeapDraw / HeapTracer?</H1>
+<P><IMG align="right" src="./index_files/index.php" style="margin-left: 5px;"><BR>
+HeapDraw was originally created as a postmortem analisys tool, to see how the heap evolved during the life of a process. The idea is that although we may be used to textual output, like that of ltrace or a malloc/free hooking library, it's much better to see it graphically (in fact I used to make drawings by hand until I realized "WTF am I doing? I have a computer to do it for me!").</P>
+
+<P>HeapTracer is the new name, after it became a runtime analisys tool.</P>
+
+<P>In the image you can see an example. It's the heap of ping. The 4 spikes correspond to the 4 packets sent. Before the first spike you can see the initialization, and after the last, the evolution of the heap for the final phase.</P>
+
+<P>In this release you can find four different versions of HeapDraw/HeapTracer, all including full sourcecode:</P>
+
+<UL>
+    <LI>Windows postmortem native version.</LI>
+    <LI>Linux postmortem native version.</LI>
+    <LI>IDA plugin, for doing runtime analisys (only Windows version for Windows appliations)</LI>
+    <LI>An unfinished python version.</LI>
+</UL>
+
+<P>If you are an IDA fan, and like developing for it, you may find interesting the IDA Plugin version, as it's a relatively complex example of an IDA debugging plugin which opens an OpenGL window to make drawings.</P>
+
+
+<H2 id="toc1">Source code and precompiled versions</H2>
+<P>We've packaged the four versions with their sourcecode and e brief tutorial in a single file:</P>
+
+<UL>
+    <LI>Latest stable release, updated on July 7, 2007 – gzip'd tarball. </LI>
+</UL>
+
+
+<H2 id="toc2">Compiling the source and installing</H2>
+<P>The package contains a separate directory for every version. Each of this directories contains specific instructions on how to build and run the tool</P>
+
+
+<H2 id="toc3">Documentation</H2>
+<UL>
+    <LI><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=HeapDraw&file=dtlogin_example.pdf">Simple tutorial.</A></LI>
+    <LI><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HealDraw.General.README">General README</A></LI>
+    <LI><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=HeapDraw&file=dtlogin.Solaris_9.truss.gz">Example output file (900k) for the tutorial</A>. Not included in the package</LI>
+    <LI><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.Linux.README">Linux native README</A></LI>
+    <LI><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.Windows.README">Windows standalone README</A></LI>
+    <LI><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.IDA.README">IDA plugin README</A></LI>
+</UL>
+
+
+<H2 id="toc4">Licensing</H2>
+<P>This software is provided under a slightly modified version of the Apache Software License. Feel free to review it <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.license">here</A> and compare it to the official Apache Software License.</P>
+
+
+<H2 id="toc5">Contact Us</H2>
+<P>Whether you want to report a bug, send a patch or give some suggestions on this package, drop us a few lines at oss@coresecurity.com.</P>
+
+<P><U></U><U></U><U></U><U></U></P>
+
+
+<H2 id="toc6">Description</H2>
+<DL>
+    <DT>Title</DT>
+        <DD>HeapDraw</DD>
+    <DT>Release date</DT>
+        <DD>2007-06-29</DD>
+    <DT>License type</DT>
+        <DD>Apache 1.1</DD>
+</DL>
+
+
+</DIV><H4>Attachments</H4><DIV id="attachments">
+<DIV class="attachment"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=HeapDraw&file=HeapDraw-HeapTracer-07-07-07.tar.gz">HeapDraw-HeapTracer-07-07-07.tar.gz</A> - gzipp'd tarball </DIV><DIV class="attachment"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=HeapDraw&file=dtlogin.Solaris_9.truss.gz">dtlogin.Solaris_9.truss.gz</A> - Example output file </DIV><DIV class="attachment"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=HeapDraw&file=dtlogin_example.pdf">dtlogin_example.pdf</A> - Simple tutorial </DIV><DIV class="attachment"><A href="./index_files/index.php">ping.HD.jpg</A> - HeapDraw screenshot </DIV></DIV>
+<DIV id="related">
+<H1>Related information</H1><H2>Areas</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=area&name=Vulnerability_Research"><SPAN class="title_title">Vulnerability Research</SPAN></A>
+</LI></UL><H2>Researchers</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=researcher&name=Gerardo_Richarte"><SPAN class="title_title">Gerardo Richarte</SPAN></A>
+</LI></UL><H2>Pages</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HealDraw.General.README"><SPAN class="title_title">HealDraw.General.README</SPAN></A>
+ | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.IDA.README"><SPAN class="title_title">HeapDraw.IDA.README</SPAN></A>
+ | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.Linux.README"><SPAN class="title_title">HeapDraw.Linux.README</SPAN></A>
+ | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=HeapDraw.Windows.README"><SPAN class="title_title">HeapDraw.Windows.README</SPAN></A>
+ | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=page&name=Pass-the-hash_toolkit.WHATSNEW"><SPAN class="title_title">Pass-the-hash toolkit.WHATSNEW</SPAN></A>
+</LI></UL></DIV>	</DIV>
+
+
+</BODY></HTML>

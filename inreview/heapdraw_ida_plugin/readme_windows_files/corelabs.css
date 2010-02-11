@@ -1,0 +1,408 @@
+@CHARSET "utf-8";
+
+h1 { 
+font-family: "Trebuchet MS"; 
+font-size:20px; 
+color:#DE3831;
+font-style:italic;
+font-weight:bold;
+}
+
+h2 { 
+font-family: "Trebuchet MS"; 
+font-size:18px; 
+color:#537F9E;
+font-style:italic;
+}
+
+
+h3 { 
+font-family: "Trebuchet MS"; 
+font-size:15px; 
+color: #000000;
+font-style:italic;
+}
+
+h4 { 
+font-family: "Trebuchet MS"; 
+font-size:15px; 
+color:#DE3831;
+font-style:italic;
+}
+
+
+p {
+font-family: "Trebuchet MS";
+font-size:13px;
+color:#444034;
+
+}
+
+a {
+font-family: "Trebuchet MS";
+color:#537F9E;
+text-decoration:none;	
+}
+
+a:hover {
+font-family: "Trebuchet MS";
+color:#537F9E;
+text-decoration: underline;	
+}
+
+a img {
+	border: 0pt none;
+}
+
+li {
+font-family: "Trebuchet MS";
+font-size:13px;
+color:#444034;
+list-style-type: inherit;
+	
+}
+
+blockquote {
+font-family: "Trebuchet MS";
+font-size:13px;
+margin-left:20px;
+margin-right:20px;
+font-style:italic;
+}
+
+table {
+font-family: "Trebuchet MS";
+font-size:13px;
+color:#444034;
+}
+
+dt {
+	font-weight: bold;
+}
+
+#wordcloud a {
+font-family: "Trebuchet MS";
+font-size:13px;
+color:#537F9E;
+text-decoration:none;
+padding-left:3px;
+padding-right:3px;
+
+}
+
+#wordcloud a:hover {
+font-family: "Trebuchet MS";
+font-size:13px;
+color:#537F9E;
+background-color: #D6E0E9;
+padding-left:3px;
+padding-right:3px;
+text-decoration:none;
+
+}
+
+#wordcloud {
+margin: 20px;
+}
+
+#user_content{
+	/*min-height:35em;*/
+}
+
+#user_content td {
+	border-color: #8D8D8D;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#user_content table {
+	border-color: #8D8D8D;
+	border-width: 2px;
+	border-style: solid;
+	border-collapse: collapse;
+	border-spacing: 0pt;
+	font-family:"Trebuchet MS";
+}
+		
+
+#related ul, #related li {
+	padding-left: 0px;
+	margin-left: 0px;
+	list-style: none;
+}
+
+/* Just for the home page */
+html{
+	background: url('/themes/sample_theme/images/bg_home.jpg') repeat-x #dbdbdb;
+}
+
+body{	
+	width:90%;
+	/*min-height:800px;*/
+	padding-top:10px;
+	margin: auto;
+	/*IE7*/
+	*margin-left:5%;
+	*margin-right:5%;
+}
+
+#header_left{
+	width:40px;
+	max-width:40px;
+	min-width:40px;
+	background: url('/themes/sample_theme/images/corner_top_left.gif') no-repeat;
+}
+
+#header_center{
+	background: url('/themes/sample_theme/images/center_top.png') repeat-x;
+}
+
+#header_center a.logo{
+	float:left;clear:right;
+	text-decoration:none;
+	border:0;
+}
+
+#header_center a.logo img{
+	border:0px;	
+}
+
+#header_right{
+	width:40px;
+	max-width:40px;
+	min-width:40px;
+	background: url('/themes/sample_theme/images/corner_top_right.gif') no-repeat;
+}
+
+
+#header_container div.amenu{
+	color:white;
+	padding-top:40px;
+	margin-left: 340px;
+	/*IE7*/
+	/*margin-left: 380px;
+	*margin-top: 0px;
+	*width:515px;*/
+}
+
+#header_container div.amenu a {
+	font-family: "Trebuchet MS";
+	font-size:13px;
+	color: #FFFFFF;
+	text-decoration:none;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+#header_container div.amenu a:hover {
+	font-family: "Trebuchet MS";
+	font-size:13px;
+	color: #FFFFFF;
+	background-color:#DE3831;
+	padding-left:3px;
+	padding-right:3px;
+	text-decoration:none;
+}
+
+#content{
+	/*height:100%;*/
+	border: 1px solid black;
+	background-color:white;
+	border-bottom:none;
+	padding-left:25px;
+	padding-top:15px;
+	padding-bottom:25px;
+}
+
+#content #list {
+	padding-right:20px;
+}
+
+#intro{
+	font-family: Verdana;
+	font-size: 14px;
+	color: #819EA9;
+	line-height: 18px;
+	font-weight:bold;
+
+}
+
+
+#boxes_right{
+	width:230px;
+	min-width:230px;
+}
+
+#boxes_left{
+	/*width:76%;*/
+}
+
+
+#boxes_right table{
+	width:100%;
+}
+
+#sidebox_top{
+	background: url('/themes/sample_theme/images/news_act_top.gif') no-repeat;
+	height:55px;
+	max-height:55px;
+	width:230px;
+}
+
+#sidebox_center{
+	background-color: #9CB3BC;
+	min-height:200px;
+	width:230px;
+	font-family: Verdana;
+	font-size:11px;
+	color:white;
+}
+
+#sidebox_center a{
+	color:#EEEEEE;
+}
+
+#sidebox_center div.title{
+	font-family: Verdana;
+	font-size: 13px;
+	color: black;
+	font-weight:bold;
+	padding-left:20px;
+	margin-bottom: 15px;
+	margin-top:10px;
+}
+
+#sidebox_center div.paragraph{
+	padding-left:20px;
+	margin-bottom:15px;
+}
+
+#sidebox_bottom{
+	background: url('/themes/sample_theme/images/news_act_bottom.gif') no-repeat;
+	height:55px;
+	height:55px;
+	max-height:55px;
+	width:230px;
+}
+
+div.more {
+	color:#9CB3BC;
+	display:inline;
+	margin-left:5px;
+}
+
+div.more a{color:#9CB3BC;
+}
+
+#box_container{
+	width:100%;
+}
+
+div.web_application,div.vuln_research,div.attack_landscape,div.miscelaneous_research, div.brainstormings, div.attack_vectors{
+	width: 214px;
+	padding-top:0px;
+	float:left;
+	margin-right:10px;
+	margin-bottom:24px;
+	*margin-right:5px;
+	margin-bottom:24px;
+
+}
+
+div.inside
+{
+	background: url('/themes/sample_theme/images/bkg_box.png') repeat-y;
+	border: 1px solid gray;
+	height: 150px;
+	max-height: 150px;
+	min-height: 150px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #666666;
+	padding:15px;
+
+}
+
+#featured_projects{
+	font-family: 'Trebuchet MS';
+	font-size: 13px;
+	padding-right:15px;
+}
+
+table#home, table#home td, table#home tr {
+	border: 0pt;
+}
+
+#sidebox table {
+	border: 0pt;
+}
+
+/* Listing styles */
+#list li {
+	margin-bottom: 8px;
+}
+
+#list span.title_title {
+	font-size:14px;
+    font-weight:bolder;
+}
+	
+#list span.title_in{
+	font:italic 12px Arial;
+}
+
+#related span.title_authors {
+	display: none;
+}
+
+#related span.separator {
+	display: none;
+}
+
+#related span.title_in {
+	display: none;
+}
+
+#related span.title_date {
+	display: none;
+}
+
+#related span.title_year {
+	display: none;
+}
+
+#web_application {
+	background: url('/themes/sample_theme/images/web_app.gif') no-repeat;
+	height:51px;
+	width:214px;
+}
+
+#vuln_research {
+	background: url('/themes/sample_theme/images/vuln_research.gif') no-repeat;
+	height:51px;
+	width:214px;
+}
+
+#attack_landscape {
+	background: url('/themes/sample_theme/images/att_land.gif') no-repeat;
+	height:51px;
+	width:214px;
+}
+
+#miscelaneous_research {
+	background: url('/themes/sample_theme/images/misc.gif') no-repeat;
+	height:51px;
+	width:214px;
+}
+
+#attack_vectors {
+	background: url('/themes/sample_theme/images/attack_vectors.jpg') no-repeat;
+	height:51px;
+	width:214px;
+}
+
+#brainstormings {
+	background: url('/themes/sample_theme/images/brainstormings.jpg') no-repeat;
+	height:51px;
+	width:214px;
+}

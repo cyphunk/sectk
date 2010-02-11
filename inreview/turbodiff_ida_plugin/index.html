@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0091)http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=turbodiff -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<TITLE>Corelabs site</TITLE>
+<LINK href="./index_files/corelabs.css" rel="stylesheet" type="text/css">
+</HEAD><BODY>
+	<DIV id="header_container">
+		<TABLE border="0" padding="0" cellpadding="0" cellspacing="0" width="100%">
+
+		<TBODY><TR><TD id="header_left">&nbsp;</TD>
+		<TD id="header_center">
+			<DIV id="header_logo"><A class="logo" href="http://corelabs.coresecurity.com/"><IMG src="./index_files/logo.gif" width="199" height="66" align="middle"></A></DIV>
+			<DIV class="amenu" valign="bottom"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=area">Areas</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=project">Projects</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=researcher">Researchers</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=publication">Publications</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=advisory">Advisories</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=tool">Tools</A> | <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=list&type=brainstorming">Brainstormings</A></DIV>
+		</TD>
+		<TD id="header_right">&nbsp;</TD>
+		</TR></TBODY></TABLE>
+	</DIV>
+	<DIV id="content">
+		<DIV id="user_content">
+
+<H1 id="toc0">What is turbodiff?</H1>
+<P>Turbodiff is a binary diffing tool developed as an IDA plugin. It discovers and analyzes differences between the functions of two binaries.</P>
+
+
+<H2 id="toc1">Requirements</H2>
+<P>"Turbodiff 1.01 beta release 1" works with IDA starting from v5.0.</P>
+
+
+<H2 id="toc2">Instructions</H2>
+<P><STRONG>For the binaries:</STRONG><BR>
+Download the plugin and store it at the directory "..\IDA\plugins".</P>
+
+<P><STRONG>If you want to compile it on your own:</STRONG> We have compiled it and tested it using Borland C. For the free version of IDA Pro (4.9) you'll need to first:<BR>
+1. Generate the ida_free.lib library. To do this execute:<BR>
+    "implib -c ida_free.lib ida_free.def"<BR>
+2. Next, you must have the linker use this library.<BR>
+3. Compile.</P>
+
+
+<H3 id="toc3"> Comparing two files:</H3>
+<OL>
+    <LI>Open the first file to be compared with IDA and run /Option 1 (take info from this idb)/ from the plugin. Close.</LI>
+    <LI>Open the second file to be compared with IDA and run /Option 1 (take info from this idb)/ from the plugin. </LI>
+    <LI>Use /Option 2 (compare with...)/ from the plugin, and when prompted to select a file, select the first file.  Chose if you want a log file to be genreated and run. Once finished a functions table will popup (watch Figure 1) describuing results. The results are then saved for later usage.</LI>
+</OL>
+
+
+<H3 id="toc4"> Accessing a comparison generated earlier:</H3>
+<OL>
+    <LI>Open one of the files with IDA. Select /Option 3 ("Compare functions with...")/ from the plugin options and choose the other file to be compared. The table will popup without executing any new tasks.</LI>
+</OL>
+
+
+<H3 id="toc5"> Comparing any two functions:</H3>
+<OL>
+    <LI>After comparing two files, you can compare any two functions between each by using /Option 4 ("Free comparison with...")/ and specifying the addresses of these actions.</LI>
+</OL>
+
+
+<H2 id="toc6"> Understanding the Output</H2>
+
+<H3 id="toc7">The table</H3>
+<P>Each row represents two funct5ions that are being compared, and with 5 columns, <STRONG>category, address, name, address, name</STRONG>, where category describes the relationship between two functions, the 2nd and 3rd column describe address/name for the first function and the 4th and 5th columns describe address/name for the second function being compared. <BR>
+The categories can be:</P>
+
+<UL>
+    <LI>identical:<UL>
+            <LI>Same function graph;
+        </LI><LI>Same checksum in each basic block;</LI>
+        <LI>Same amount of instructions in each basic block;</LI>
+    </UL></LI>
+    <LI>suspicious+:<UL>
+            <LI>Same function graph;
+        </LI><LI>/Different/ checksum in each basic block;</LI>
+        <LI>Same amount of instructions in each basic block;</LI>
+    </UL></LI>
+    <LI>suspicious++:<UL>
+            <LI>Same function graph;
+        </LI><LI>/Different/ checksum in at least one basic block;</LI>
+        <LI>/Different/ amount of instructions in at least one basic block;</LI>
+    </UL></LI>
+    <LI>changed:<UL>
+            <LI>None of the above;
+        </LI><LI>Related by an heuristic, as described in the presentation;</LI>
+    </UL></LI>
+    <LI>unmatched:<UL>
+            <LI>None of the above;</LI>
+    </UL></LI>
+</UL>
+
+
+<H3 id="toc8"> Colors for basic blocks when diffing functions</H3>
+<UL>
+    <LI>white: Same checksum and  number of instructions</LI>
+</UL>
+
+<UL>
+    <LI>green: Same number of instructions</LI>
+</UL>
+
+<P><IMG src="./index_files/index.php"></P>
+
+<UL>
+    <LI>yellow: Different number of instructions</LI>
+</UL>
+
+<P><IMG src="./index_files/index(1).php"></P>
+
+<UL>
+    <LI>red: Basic block that the differ didn't match.</LI>
+</UL>
+
+<P><IMG src="./index_files/index(2).php"></P>
+
+
+<H2 id="toc9">Downloads</H2>
+<UL>
+    <LI>Stable release (1.01 beta release 1), updated on October 2, 2009. <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=turbodiff&file=turbodiff_v1.0.1.zip">Sources and plugin</A></LI>
+    <LI>Latest stable release (1.01 beta, r1, second build), updated on October 19, 2009:<UL>
+        <LI>IDA, starting with version v5 <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=turbodiff&file=turbodiff_v1.0.1b2.zip">Sources and plugin</A></LI>
+        <LI>version for (free) IDA PRO v4.9 <A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=turbodiff&file=turbodiff-for-free-ida_v1.0.1b2.zip">Sources and plugin</A></LI>
+    </UL></LI>
+</UL>
+
+
+<H2 id="toc10">Known Issues</H2>
+<UL>
+    <LI>There is an issue to be solved with the heuristics that produces false negatives when detecting identical functions. This will be solved by the next release.</LI>
+</UL>
+
+
+<H2 id="toc11">Licensing</H2>
+<P>This software is provided under the GPLv2 license.</P>
+
+
+<H2 id="toc12">Contact Us</H2>
+<P>Whether you want to report a bug or give some suggestions on this package, drop us a few lines at oss- at -coresecurity.com or contact the author, Nicolas Economou, at neconomou@</P>
+
+
+<H2 id="toc13"> Description</H2>
+<DL>
+    <DT>Title</DT>
+        <DD>turbodiff</DD>
+    <DT>Release date</DT>
+        <DD>2009-10-08</DD>
+    <DT>License type</DT>
+        <DD>GPL v2.</DD>
+</DL>
+
+
+</DIV><H4>Attachments</H4><DIV id="attachments">
+<DIV class="attachment"><A href="./index_files/index.php">green_bb_example.png</A> -  </DIV><DIV class="attachment"><A href="./index_files/index(2).php">red_bb_example.png</A> -  </DIV><DIV class="attachment"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=turbodiff&file=turbodiff-for-free-ida_v1.0.1b2.zip">turbodiff-for-free-ida_v1.0.1b2.zip</A> -  </DIV><DIV class="attachment"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=turbodiff&file=turbodiff_v1.0.1.zip">turbodiff_v1.0.1.zip</A> -  </DIV><DIV class="attachment"><A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=attachment&type=tool&page=turbodiff&file=turbodiff_v1.0.1b2.zip">turbodiff_v1.0.1b2.zip</A> -  </DIV><DIV class="attachment"><A href="./index_files/index(1).php">yellow_bb_example.png</A> -  </DIV></DIV>
+<DIV id="related">
+<H1>Related information</H1><H2>Areas</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=area&name=Vulnerability_Research"><SPAN class="title_title">Vulnerability Research</SPAN></A>
+</LI></UL><H2>Researchers</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=researcher&name=Nicolas_Economou"><SPAN class="title_title">Nicolas Economou</SPAN></A>
+</LI></UL><H2>Publications</H2>
+<UL><LI>
+<A href="http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=publication&name=Heuristicas_aplicadas_a_la_comparacion_%28_diffeo_%29_de_binarios"><SPAN class="title_date">2009-09-17<SPAN class="separator">. </SPAN></SPAN><SPAN class="title_title">Heuristicas aplicadas a la comparacion ( diffeo ) de binarios<SPAN class="separator">, </SPAN></SPAN><SPAN class="title_authors">Nicolas Economou</SPAN></A>
+</LI></UL></DIV>	</DIV>
+
+
+</BODY></HTML>
